@@ -20,6 +20,7 @@ services:
 
   kafka:
     image: wurstmeister/kafka
+    container_name: kafka
     depends_on:
     - zookeeper
     ports:
@@ -32,16 +33,27 @@ services:
       KAFKA_LISTENERS: INSIDE://0.0.0.0:9093,OUTSIDE://0.0.0.0:9092
       KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_CREATE_TOPICS: "KafkaDemo:1:1"
+      KAFKA_CREATE_TOPICS: "restTopic:1:1"
       KAFKA_LOG4J_LOGGERS: org.apache.zookeeper=ERROR, org.apache.kafka=ERROR, kafka=ERROR, kafka.cluster=ERROR, kafka.controller=ERROR, kafka.coordinator=ERROR, kafka.log=ERROR, kafka.server=ERROR, kafka.zookeeper=ERROR, state.change.logger=ERROR
   web:
-    image: kartacadocker    
+    build: ./rest    
+    container_name: restAPI
     ports: 
       - "5000:5000"
     restart: always
+    volumes:
+      - .:/codes
   consumer:
-    image : consumerimage
-    ports: 
-      - "8988:8988"
+    container_name: kafkaConsumer
+    build : ./consumer
     restart: always
+  dashboard:
+    container_name: dashboard
+    build : ./dashboard
+    restart: always
+    ports:
+      - "8988:8988"
+    expose: 
+      - "8988"
+
   

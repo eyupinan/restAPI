@@ -1,5 +1,6 @@
 import matplotlib
 matplotlib.use('WebAgg')
+matplotlib.rcParams["webagg.address"]="0.0.0.0"
 import matplotlib.pyplot as plt,mpld3
 import matplotlib.dates as md
 import matplotlib.animation as animation
@@ -35,36 +36,14 @@ def get_arr(mycol,method):
     
     #print(DF)
     return DF
-    #print("arr1 önce:",arr1)
-    """for i in range((len(arr1))):
-        arr1[i]=(int(arr1[i]/30))/2
-    arr1_ort=[]
-    arr2_ort=[]
-    adet=[]
-    i=0
-    #print("arr1:",arr1)
-    while(i < 60 ):
-        arr1_ort.append(i)
-        arr2_ort.append(0)
-        adet.append(0)
-        i+=0.5
-    for i in range(len(arr1)):
-        arr2_ort[int(arr1[i]*2)]+=arr2[i]
-        adet[int(arr1[i]*2)]+=1
-    ort=[]
-    for i in range(len(adet)):
-        if adet[i]!=0:
-            ort.append(arr2_ort[i]/adet[i])
-        else :
-            ort.append(0)
-    return arr1_ort,ort"""
-myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+myclient = pymongo.MongoClient("mongodb://mongodb:27017/")
 mydb = myclient["mydatabase4"]
 mycol = mydb["mylogs"]
 getDF=get_arr(mycol,"GET")
 postDF=get_arr(mycol,"POST")
 putDF=get_arr(mycol,"PUT")
 delDF=get_arr(mycol,"DELETE")
+print(getDF)
 fig1 = plt.figure(figsize=[12, 4.8])
 ax1 = fig1.add_subplot(1,1,1)
 ax1.xaxis.set_major_formatter(xfmt)

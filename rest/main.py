@@ -35,7 +35,7 @@ def home():
         content = request.get_json(force=True)
         return "post data "+str(content)
     if request.method=="GET":
-        return "get method"
+        return "get method3"
     if request.method=="PUT":
         return "put method"
     if request.method=="DELETE":

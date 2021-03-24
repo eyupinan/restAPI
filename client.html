@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <script>
+        //$.get("http://localhost:8080/hello",(data,status)=>{
+        //    console.log(data)
+        //})
+        
+        user={
+            "name":"ibrahim eyyup",
+            "surname":"inan"
+        }
+        str="ibrahima yattara"
+        $(document).ready(()=>{
+
+        
+        $("#get").click(()=>{
+            $.get("http://localhost:5000/",(data,status)=>{
+            console.log("get:")
+            console.log("status:",status)
+            console.log("received data:",data)
+        })
+        })
+        $("#post").click(()=>{
+            $.post("http://localhost:5000/",JSON.stringify(user),(data,status)=>{
+            console.log("status:",status)
+            console.log("received data:",data)
+        })
+
+        })
+        $("#put").click(()=>{
+            $.ajax({
+                url: 'http://localhost:5000/',
+                type: 'PUT',
+                success: function(result) {
+                    console.log(result)
+                }
+            });
+        
+        })
+        $("#delete").click(()=>{
+            $.ajax({
+                url: 'http://localhost:5000/',
+                type: 'DELETE',
+                success: function(result) {
+                    console.log(result)
+                }
+            });
+        
+        })
+    })
+        </script>
+        <button id="get">get</button>
+        <button id="post">post</button>
+        <button id="put">put</button>
+        <button id="delete">delete</button>
+</html>

@@ -1,0 +1,4 @@
+Flask==1.1.2
+kafka-python==2.0.2
+Flask-Cors==3.0.10
+Flask-Executor==0.9.4

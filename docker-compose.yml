@@ -40,8 +40,6 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_CREATE_TOPICS: "restTopic:1:1"
-      #KAFKA_LOG4J_LOGGERS: org.apache.zookeeper=ERROR, org.apache.kafka=ERROR, kafka=ERROR, kafka.cluster=ERROR, kafka.controller=ERROR, kafka.coordinator=ERROR, kafka.log=ERROR, kafka.server=ERROR, kafka.zookeeper=ERROR, state.change.logger=ERROR
-      #KAFKA_LOG4J_LOGGERS: "kafka.controller=ERROR, kafka.producer.async.DefaultEventHandler=ERROR, state.change.logger=ERROR"
       KAFKA_LOG4J_LOGGERS: "kafka.controller=WARN,kafka.producer.async.DefaultEventHandler=WARN,state.change.logger=WARN,kafka=WARN"
   web:
     build: ./rest    

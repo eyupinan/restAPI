@@ -8,7 +8,8 @@ import logging
 from DelayMiddleware import Middleware
 from flask_executor import Executor
 from connections_config import SERVER_PORT,SERVER_HOST
-
+import threading
+import io
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
 
@@ -40,6 +41,12 @@ def home():
         return "put method"
     if request.method=="DELETE":
         return "delete method"
+def func(isim):
+    dosya=io.open(isim,"r")
+    print("-",dosya.read(),"-")
+
 if __name__ == '__main__':
+    #thread=threading.Thread(target=func,args=("requests.log",))
+    #thread.start()
     app.run(host=SERVER_HOST,port = SERVER_PORT,debug=False,threaded=True)
 

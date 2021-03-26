@@ -6,7 +6,6 @@ import time
 from producer import KafkaHandler
 import threading
 from flask_executor import Executor
-print("file :",__file__)
 
 FORMAT = '%(method)s,%(delay)s,%(timestamp)s'
 producer_log=logging.getLogger("kafka.producer.kafka")
@@ -35,14 +34,11 @@ class Middleware:
             delay =random.randint(900,1000)/1000
         
         return delay
-    #__call__
     def delay(self,req,executor):
         if req.method in ["PUT","GET","POST","DELETE"]:
             dl=self.random_time(req) 
-            print("method:",req.method,"delay:",dl)
             timestamp=str(int(time.time()))
             time.sleep(dl)
-            print("delay bitti")
             format_map={
             "method":req.method ,     
             "delay":str(int(dl*1000)),
@@ -50,5 +46,4 @@ class Middleware:
             }
             formatted=FORMAT % format_map
             executor.submit(self.logKafka.info,formatted)
-
         return 

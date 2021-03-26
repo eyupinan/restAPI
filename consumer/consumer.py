@@ -1,12 +1,22 @@
 from kafka import KafkaConsumer
-from kafka import KafkaProducer
 import pymongo
-print("consumer geldi")
-consumer = KafkaConsumer("restTopic",bootstrap_servers='kafka:9093',value_deserializer=lambda x: x.decode("utf-8"))
-myclient = pymongo.MongoClient("mongodb://mongodb:27017/")
-print("connection:",myclient)
-mydb = myclient["mydatabase4"]
-mycol = mydb["mylogs"]
+import logging
+import time
+log = logging.getLogger('kafka.conn')
+log.setLevel(logging.CRITICAL)
+while True:
+    try:
+        consumer = KafkaConsumer("restTopic",bootstrap_servers='kafka:9093',value_deserializer=lambda x: x.decode("utf-8"))
+        myclient = pymongo.MongoClient("mongodb://mongodb:27017/")
+        mydb = myclient["mydatabase4"]
+        mycol = mydb["mylogs"]
+        break
+    except Exception as e:
+        logging.warning("bağlantı kurulamadı:"+str(e))
+        time.sleep(1)
+
+
+
 
 for msg in consumer:
     pieces=msg.value.split(",")

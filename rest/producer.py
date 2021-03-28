@@ -1,24 +1,24 @@
 import logging
 import sys
 import time
+import os
 from kafka import KafkaProducer
-from connections_config import KAFKA_HOST,KAFKA_TOPIC
-
+import json
+kafkaAdress=os.environ["KAFKA_ADDRESS"]
 class KafkaHandler(logging.Handler):
 
     def __init__(self):
         logging.Handler.__init__(self)
         while True:
             try:
-                #x=5/0
-                self.producer = KafkaProducer(bootstrap_servers=[KAFKA_HOST])
+                self.producer = KafkaProducer(bootstrap_servers=[kafkaAdress],value_serializer=lambda m: json.dumps(m).encode('utf-8'))
                 break
             except Exception as e:
                 print("kafka bağlantısı kurulamadı:",e)
                 print("1 saniye sonra yeniden denenecek")
             time.sleep(1)
         
-        self.topic = KAFKA_TOPIC
+        self.topic = os.environ["KAFKA_TOPIC"]
 
     def emit(self, record):
         if 'kafka.' in record.name:
@@ -26,7 +26,9 @@ class KafkaHandler(logging.Handler):
         #time.sleep(10)
         msg = self.format(record)
         try:
-            self.producer.send(self.topic, bytes(msg,"utf-8"))
+            pieces=msg.split(",")
+            new_message={"method":pieces[0],"delay":pieces[1],"timestamp":int(pieces[2])}
+            self.producer.send(self.topic, new_message)
             self.flush(timeout=1.0)
         except Exception as e:
             print(e)

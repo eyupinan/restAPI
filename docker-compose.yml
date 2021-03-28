@@ -9,7 +9,7 @@ services:
     volumes:
     - /home/barry/mongodb/database:/data/db
     ports:
-    - 27017:27017
+    - ${mongo_port}:27017
     expose: 
     - "27017"
     restart: unless-stopped
@@ -28,38 +28,48 @@ services:
     depends_on:
     - zookeeper
     ports:
-      - "9092:9092"
+      - "${kafka_outside_port}:${kafka_outside_port}"
     expose:
-      - "9093"
+      - ${kafka_inside_port}
     logging: 
       driver: "none"
     environment:
-      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:9093,OUTSIDE://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: INSIDE://${kafka_inside_host}:${kafka_inside_port},OUTSIDE://${kafka_outside_host}:${kafka_outside_port}
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
-      KAFKA_LISTENERS: INSIDE://0.0.0.0:9093,OUTSIDE://0.0.0.0:9092
+      KAFKA_LISTENERS: INSIDE://0.0.0.0:${kafka_inside_port},OUTSIDE://0.0.0.0:${kafka_outside_port}
       KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_CREATE_TOPICS: "restTopic:1:1"
+      KAFKA_CREATE_TOPICS: ${kafka_topic}:1:1
       KAFKA_LOG4J_LOGGERS: "kafka.controller=WARN,kafka.producer.async.DefaultEventHandler=WARN,state.change.logger=WARN,kafka=WARN"
   web:
-    build: ./rest    
+    build: ./rest
     container_name: restAPI
     ports: 
-      - "5000:5000"
+      - ${rest_port}:${rest_port}
     restart: always
     volumes:
       - .:/codes
+    environment: 
+      REST_HOST: ${rest_host}
+      REST_PORT: ${rest_port}
+      KAFKA_TOPIC: ${kafka_topic}
+      KAFKA_ADDRESS: ${kafka_inside_host}:${kafka_inside_port}
   consumer:
     container_name: kafkaConsumer
     build : ./consumer
     restart: always
+    environment: 
+      KAFKA_ADDRESS: ${kafka_inside_host}:${kafka_inside_port}
+      MONGO_ADDRESS: "mongodb:${mongo_port}"
+      KAFKA_TOPIC: ${kafka_topic}
   dashboard:
     container_name: dashboard
     build : ./dashboard
-    restart: always
     ports:
-      - "8988:8988"
+      - "8052:8052"
     expose: 
-      - "8988"
+      - "8052"
+    environment: 
+      MONGO_ADDRESS: "mongodb:${mongo_port}"
 
   

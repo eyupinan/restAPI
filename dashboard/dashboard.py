@@ -11,13 +11,14 @@ import numpy as np
 from datetime import datetime
 import os 
 import logging
+from dateutil import tz
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
 myclient = pymongo.MongoClient("mongodb://"+os.environ["MONGO_ADDRESS"])
 #myclient = pymongo.MongoClient("mongodb://localhost:27017")
 mydb = myclient["mydatabase4"]
 mycol = mydb["mylogs"]
-
+ist=tz.gettz("Turkey/Istanbul")
 def get_arr(mycol,method):
         now = time.time()
         #print("now:",now)
@@ -30,7 +31,7 @@ def get_arr(mycol,method):
         for i in logs:
             #ek=int(i["timestamp"])%60
             tmstp=int(i["timestamp"])-(now-3600)
-            date_time.append(pd.to_datetime(datetime.fromtimestamp(i["timestamp"]).strftime('%H:%M:%S')))
+            date_time.append(pd.to_datetime(datetime.fromtimestamp(i["timestamp"],tz=ist).strftime('%H:%M:%S')))
             arr1.append(tmstp)
             arr2.append(float(i["delay"]))
         date_time = pd.to_datetime(date_time)
@@ -117,10 +118,13 @@ app.layout = html.Div(children=[
               [Input('graph-update', 'n_intervals')])
 def update_graph_scatter(n):
     traces=trace_generator(mycol)
+    print(traces[0].x)
     now=time.time()
+    print(datetime.fromtimestamp(now),tz=ist)
+    datetime.fromtimestamp(now)
     return {'data': traces,
             'layout': go.Layout(
-                xaxis=dict(range=[datetime.fromtimestamp(now-3600),datetime.fromtimestamp(now)]),
+                xaxis=dict(range=[datetime.fromtimestamp(now-3600,tz=ist),datetime.fromtimestamp(now,tz=ist)]),
                 yaxis=dict(range=[0, 3000]),
                 plot_bgcolor='#eeebeb',
                 paper_bgcolor='#eeebeb',

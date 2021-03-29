@@ -8,6 +8,7 @@ COPY DelayMiddleware.py /usr/src/app/
 COPY producer.py /usr/src/app/
 COPY requirements.txt /usr/src/app/
 RUN pip install -r requirements.txt
+ENV TZ Europe/Istanbul
 EXPOSE 5000
 CMD ["python", "main.py"]
 

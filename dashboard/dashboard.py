@@ -12,24 +12,23 @@ from datetime import datetime
 import os 
 import logging
 from dateutil import tz
+
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
 myclient = pymongo.MongoClient("mongodb://"+os.environ["MONGO_ADDRESS"])
 #myclient = pymongo.MongoClient("mongodb://localhost:27017")
 mydb = myclient["mydatabase4"]
 mycol = mydb["mylogs"]
-ist=tz.gettz("Turkey/Istanbul")
+ist=tz.gettz("Europe/Istanbul")
+
 def get_arr(mycol,method):
         now = time.time()
-        #print("now:",now)
-        #print(datetime.fromtimestamp(now).strftime('%H:%M:%S'))
         query = { "method": method , "timestamp": { "$gt" : now-3600 }}
         logs = mycol.find(query)
         arr1=[]
         arr2=[]
         date_time=[]
         for i in logs:
-            #ek=int(i["timestamp"])%60
             tmstp=int(i["timestamp"])-(now-3600)
             date_time.append(pd.to_datetime(datetime.fromtimestamp(i["timestamp"],tz=ist).strftime('%H:%M:%S')))
             arr1.append(tmstp)
@@ -46,22 +45,22 @@ def trace_generator(mycol):
     putDF=get_arr(mycol,"PUT")
     delDF=get_arr(mycol,"DELETE")
     aralik="10S"
-    #print(getDF)
     getDF=getDF.resample(aralik).mean().fillna(method='ffill')
-    #print("---")
-    #print(getDF)
-    #exit()
     postDF=postDF.resample(aralik).mean().fillna(method='ffill')
     putDF=putDF.resample(aralik).mean().fillna(method='ffill')
     delDF=delDF.resample(aralik).mean().fillna(method='ffill')
+    fill_type="tozeroy"
     get_trace = plotly.graph_objs.Scatter(
         x=getDF.index,
         y=getDF["delay"],
         name='get method',
         mode='lines',
+        fill=fill_type,
+        fillcolor="rgba(0, 0, 255, 0.1)",
         line=dict(
             shape='hv',
-            width=1
+            width=1,
+            color="rgb(0, 0, 255)"
         )
     )
     
@@ -70,9 +69,12 @@ def trace_generator(mycol):
         y=postDF["delay"],
         name='post method',
         mode='lines',
+        fill=fill_type,
+        fillcolor="rgba(255, 0, 0, 0.1)",
         line=dict(
             shape='hv',
-            width=1
+            width=1,
+            color="rgb(255, 0, 0)"
         )
     )
     put_trace = plotly.graph_objs.Scatter(
@@ -80,9 +82,12 @@ def trace_generator(mycol):
         y=putDF["delay"],
         name='put method',
         mode='lines',
+        fill=fill_type,
+        fillcolor="rgba(0, 118, 0, 0.1)",
         line=dict(
             shape='hv',
-            width=1
+            width=1,
+            color="rgb(0, 118, 0)"
         )
     )
     del_trace = plotly.graph_objs.Scatter(
@@ -90,9 +95,12 @@ def trace_generator(mycol):
         y=delDF["delay"],
         name='delete method',
         mode='lines',
+        fill=fill_type,
+        fillcolor="rgba(214, 60, 170, 0.1)",
         line=dict(
             shape='hv',
-            width=1
+            width=1,
+            color="rgb(214, 60, 170)"
         )
     )
     return [get_trace,post_trace,put_trace,del_trace]
@@ -118,10 +126,7 @@ app.layout = html.Div(children=[
               [Input('graph-update', 'n_intervals')])
 def update_graph_scatter(n):
     traces=trace_generator(mycol)
-    print(traces[0].x)
     now=time.time()
-    print(datetime.fromtimestamp(now),tz=ist)
-    datetime.fromtimestamp(now)
     return {'data': traces,
             'layout': go.Layout(
                 xaxis=dict(range=[datetime.fromtimestamp(now-3600,tz=ist),datetime.fromtimestamp(now,tz=ist)]),

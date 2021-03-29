@@ -7,5 +7,6 @@ COPY requirements.txt /usr/src/app/
 COPY assets /usr/src/app/assets
 RUN pip install -r requirements.txt
 EXPOSE 8050
+ENV TZ Europe/Istanbul
 CMD ["python", "dashboard.py"]
 

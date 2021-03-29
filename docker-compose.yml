@@ -71,5 +71,7 @@ services:
       - "8052"
     environment: 
       MONGO_ADDRESS: "mongodb:${mongo_port}"
+      TZ: Turkey/Istanbul
+
 
   

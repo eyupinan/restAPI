@@ -54,6 +54,7 @@ services:
       REST_PORT: ${rest_port}
       KAFKA_TOPIC: ${kafka_topic}
       KAFKA_ADDRESS: ${kafka_inside_host}:${kafka_inside_port}
+      MONGO_ADDRESS: "mongodb:${mongo_port}"
   consumer:
     container_name: kafkaConsumer
     build : ./consumer

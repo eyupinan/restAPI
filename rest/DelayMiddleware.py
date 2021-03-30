@@ -23,6 +23,7 @@ class Middleware:
         self.logKafka.setLevel(level=logging.INFO)
         kafkahandler=KafkaHandler()
         self.logKafka.addHandler(kafkahandler)
+        self.sayac=0
     def random_time(self,req):
         if req.method=="GET":
             delay =random.randint(2400,3000)/1000
@@ -35,10 +36,14 @@ class Middleware:
         
         return delay
     def delay(self,req,executor):
+        dl=""
+        #content = req.get_json(force=True)
+        #print("request received",content["sayac"],req.method,time.time())
         if req.method in ["PUT","GET","POST","DELETE"]:
             dl=self.random_time(req) 
             timestamp=str(int(time.time()))
             time.sleep(dl)
+            
             format_map={
             "method":req.method ,     
             "delay":str(int(dl*1000)),
@@ -46,4 +51,4 @@ class Middleware:
             }
             formatted=FORMAT % format_map
             executor.submit(self.logKafka.info,formatted)
-        return 
+        return dl

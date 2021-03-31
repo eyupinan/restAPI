@@ -35,7 +35,12 @@ def get_content(req):
     except:
         content={}
     return content
-        
+def add_value(args,entity_name_list,value_list):
+    for index in range(len(entity_name_list)):
+        if value_list[index]!=None:
+            args[entity_name_list[index]]=value_list[index]
+    return args
+
 @app.before_request
 def middle():
     print("request received",request.url,request.method)
@@ -62,58 +67,95 @@ def home():
 @app.route('/city/<city_name>',methods=["POST","GET","PUT","DELETE"])
 def set_city(city_name=None):
     if request.method=="POST":
-        content = request.get_json(force=True)
-        if city_name!=None:
-            content["name"]=city_name
-        mong_obj.setCity(content)
+        content=get_content(request)
+        args_dict=request.args.to_dict()
+        content=add_value(content,["name"],[city_name])
+        mong_obj.setCity(args_dict,content)
+
     elif request.method=="GET":
-        result_arr=mong_obj.getCity(request.args,city_name=city_name)
+        args_dict=request.args.to_dict()
+        args_dict=add_value(args_dict,["name"],[city_name])
+        result_arr=mong_obj.getCity(args_dict)
         response_json={"cities":result_arr}
         js=jsonify(response_json)
         return js
     elif request.method=="PUT":
         if bool(request.args)!=False or city_name!=None:
             content=get_content(request)
-            mong_obj.updateCity(request.args,content,city_name)
-            return Response("başarılı",status=200)
+            args_dict=add_value(request.args.to_dict(),["name"],[city_name])
+            state=mong_obj.updateCity(args_dict,content)
+            if state==True:
+                return Response("başarılı",status=200)
+            else:
+                return Response("başarısız",status=400)
         else:
-            return Response("sorgu bulunamadi!",status=500)
+            return Response("sorgu bulunamadi!",status=400)
     elif request.method=="DELETE":
-        content=get_content(request)
-        mong_obj.deleteCity(content,city_name=city_name)
-        return Response("başarılı",status=200)
+        content=add_value(get_content(request),["name"],[city_name])
+        state=mong_obj.deleteCity(content)
+        if state==True:
+            return Response("başarılı",status=200)
 
     
-        
-@app.route('/<city_name>/<name>',methods=["POST","GET"])
-@app.route('/<city_name>/borough',methods=["POST","GET"])
-@app.route('/borough/<name>',methods=["POST","GET"])
-@app.route('/borough',methods=["POST","GET"])
-def set_borough_with_city_name(city_name=None,name=None):
+@app.route('/<city_name>/<borough_name>',methods=["POST","GET","PUT","DELETE"])
+@app.route('/<city_name>/borough',methods=["POST","GET","PUT","DELETE"])
+@app.route('/borough/<borough_name>',methods=["POST","GET","PUT","DELETE"])
+@app.route('/borough',methods=["POST","GET","PUT","DELETE"])
+def set_borough_with_city_name(city_name=None,borough_name=None):
+    ref={"name":city_name}# referans eklemek için parametre olarak verilir
+    #ismi verilmiş olan şehrin id değeri yapılacak işleme dahil edilir
     if request.method=="POST":
-        content = request.get_json(force=True)
-        if name!=None:
-            content["name"]=name
-        if city_name==None:
-            city_name=content["city_name"]
-        mong_obj.setBorough(content,city_name)
+        content=add_value(get_content(request),["name"],[borough_name])
+        args_dict=request.args.to_dict()
+        mong_obj.setBorough(args_dict,content,ref)
     elif request.method=="GET":
-        content = request.args
-        result=mong_obj.getBorough(content,city_name,name)
+        args_dict=add_value(request.args,["name"],[borough_name])
+        result=mong_obj.getBorough(args_dict,ref)
         result_json={"boroughs":result}
         js=jsonify(result_json)
         return js
     elif request.method=="PUT":
-        if bool(request.args)!=False or name!=None:
+        if bool(request.args)!=False or borough_name!=None:
             content=get_content(request)
-            mong_obj.updateBorough(request.args,content,city_name,name)
+            args_dict=add_value(request.args.to_dict(),["name"],[borough_name])
+            
+            mong_obj.updateBorough(args_dict,content,ref)
         else:
             return Response("sorgu bulunamadı",status=400)
     elif request.method=="DELETE":
-        content=get_content(request)
-        mong_obj.deleteBorough(content,city_name=city_name,name=name)
+        content=add_value(get_content(request),["name"],[borough_name])
+        mong_obj.deleteBorough(content,ref)
         return Response("başarılı",status=200)
-
+@app.route('/city/<city_name>/update',methods=["PUT"])
+@app.route('/city/<city_name>/update/<entity_name>/<value>',methods=["PUT"])
+@app.route('/<city_name>/update/<entity_name>/<value>',methods=["PUT"])
+def update_city(city_name,entity_name=None,value=None):
+    if bool(request.args)!=False or (entity_name!=None and value!=None):# bir update datasının sağlandığının kontrolü
+        #bu kullanımda city_name url kısmı sorgu için update sonrasında verilecek entity ismi ile verilen
+        #parametre  veya query parametreleri update edilecek data olarak kullanılır.
+        content=request.args.to_dict()
+        content=add_value(content,[entity_name],[value])
+        query={"name":city_name}
+        mong_obj.updateCity(query,content)
+        return Response("başarılı",status=200)
+    else:
+        return Response("gerekli parametreler sağlanmadı",status=400)
+@app.route('/borough/<borough_name>/update',methods=["PUT"])
+@app.route('/<city_name>/<borough_name>/update',methods=["PUT"])
+@app.route('/<city_name>/<borough_name>/update/<entity_name>/<value>',methods=["PUT"])
+@app.route('/borough/<borough_name>/update/<entity_name>/<value>',methods=["PUT"])
+def update_borough(borough_name,entity_name,value,city_name=None):
+    if bool(request.args)!=False or (entity_name!=None and value!=None):# bir update datasının sağlandığının kontrolü
+        #burada url içerisindeki ilçe ismi ve şehir ismi sorgu için , update dizini sonrasındaki url parametreleri
+        # ve query parametreleri update datası olarak kullanılmıştır
+        content=request.args.to_dict()
+        content=add_value(content,[entity_name],[value])
+        query={"name":borough_name}
+        ref={"name":city_name}
+        mong_obj.updateBorough(query,content,ref)
+        return Response("başarılı",status=200)
+    else:
+        return Response("gerekli parametreler sağlanmadı",status=400)
 
 
 if __name__ == '__main__':

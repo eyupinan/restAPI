@@ -1,27 +1,55 @@
+ERROR:main:Exception on /samsun [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:POST,2032,1617121605
+ERROR:main:Exception on /samsun/havza [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: set_borough_with_city_name() got an unexpected keyword argument 'name'
+INFO:restAPI:POST,2068,1617122564
 WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /user [GET]
+ERROR:main:Exception on /samsun/havza [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
-    response = self.make_response(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
-    "The view function did not return a valid response. The"
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-ERROR:main:Exception on /user [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
-    response = self.make_response(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
-    "The view function did not return a valid response. The"
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-ERROR:main:Exception on /user [GET]
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: set_borough_with_city_name() got an unexpected keyword argument 'name'
+INFO:restAPI:POST,2003,1617122636
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,2389,1617122660
+ERROR:main:Exception on /samsun/havza [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -33,44 +61,22 @@ Traceback (most recent call last):
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
 WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /user [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
-    response = self.make_response(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
-    "The view function did not return a valid response. The"
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:GET,2466,1617047999
-ERROR:main:Exception on /user [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
-    response = self.make_response(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
-    "The view function did not return a valid response. The"
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:GET,2536,1617048015
-ERROR:main:Exception on /user [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
-    response = self.make_response(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
-    "The view function did not return a valid response. The"
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:GET,2590,1617049117
+INFO:restAPI:PUT,1569,1617133460
 WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:POST,2256,1617052724
+WARNING:kafka.client:Unable to send to wakeup socket!
+ERROR:main:Exception on /trabzon/of/update/postakodu/61830 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:PUT,1763,1617136398
+WARNING:kafka.client:Unable to send to wakeup socket!
 ERROR:main:Exception on /city [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
@@ -82,7 +88,37 @@ Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-ERROR:main:Exception on /trabzon/borough [POST]
+INFO:restAPI:POST,2285,1617144796
+WARNING:kafka.client:Unable to send to wakeup socket!
+ERROR:main:Exception on /city [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:POST,2182,1617144894
+INFO:restAPI:POST,2214,1617144927
+ERROR:main:Exception on /sehir2 [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:GET,2944,1617145007
+INFO:restAPI:GET,2797,1617145026
+INFO:restAPI:GET,2775,1617145050
+INFO:restAPI:PUT,1751,1617145118
+ERROR:main:Exception on /trabzon [PUT]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -98,107 +134,120 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 60, in set_borough
-    mong_obj.setBorough(city_name,content)
-  File "C:\Users\eyyup\Desktop\kartaca-project\rest\database.py", line 15, in setBorough
-    borough_obj["cityId"]=_city._id
-AttributeError: 'dict' object has no attribute '_id'
-INFO:restAPI:POST,2025,1617053015
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /trabzon/borough [POST]
+  File "main.py", line 86, in set_city
+    state=mong_obj.updateCity(args_dict,content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 37, in updateCity
+    self.cities_col.update(que,new_values)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 3327, in update
+    write_concern, collation=collation)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 870, in _update_retryable
+    _update, session)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 866, in _update
+    retryable_write=retryable_write)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 837, in _update
+    _check_write_command_response(result)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\helpers.py", line 208, in _raise_last_write_error
+    raise WriteError(error.get("errmsg"), error.get("code"), error)
+pymongo.errors.WriteError: '$set' is empty. You must specify a field like so: {$set: {<field>: ...}}, full error: {'index': 0, 'code': 9, 'errmsg': "'$set' is empty. You must specify a field like so: {$set: {<field>: ...}}"}
+INFO:restAPI:PUT,1752,1617145183
+INFO:restAPI:PUT,1414,1617145261
+INFO:restAPI:PUT,1453,1617145295
+INFO:restAPI:DELETE,948,1617145378
+INFO:restAPI:DELETE,1394,1617145403
+INFO:restAPI:POST,2193,1617145433
+ERROR:main:Exception on /sehir1 [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 61, in set_borough
-    mong_obj.setBorough(city_name,content)
-  File "C:\Users\eyyup\Desktop\kartaca-project\rest\database.py", line 15, in setBorough
-    borough_obj["cityId"]=_city._id
-AttributeError: 'dict' object has no attribute '_id'
-INFO:restAPI:POST,2384,1617053056
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /trabzon/borough [POST]
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+ERROR:main:Exception on /sehir2 [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 61, in set_borough
-    mong_obj.setBorough(city_name,content)
-  File "C:\Users\eyyup\Desktop\kartaca-project\rest\database.py", line 15, in setBorough
-    borough_obj["cityId"]=_city._id
-AttributeError: 'dict' object has no attribute '_id'
-INFO:restAPI:POST,1981,1617053077
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /trabzon/borough [POST]
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:POST,2271,1617145448
+INFO:restAPI:POST,2290,1617145559
+ERROR:main:Exception on /sehir1/ilce1 [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 61, in set_borough
-    mong_obj.setBorough(city_name,content)
-  File "C:\Users\eyyup\Desktop\kartaca-project\rest\database.py", line 16, in setBorough
-    borough_obj["cityId"]=_city._id
-AttributeError: 'dict' object has no attribute '_id'
-INFO:restAPI:POST,2236,1617053103
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /trabzon/borough [POST]
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:POST,2223,1617145646
+ERROR:main:Exception on /sehir1/borough [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 61, in set_borough
-    mong_obj.setBorough(city_name,content)
-  File "C:\Users\eyyup\Desktop\kartaca-project\rest\database.py", line 15, in setBorough
-    print("city:",_city._id)
-AttributeError: 'dict' object has no attribute '_id'
-INFO:restAPI:POST,2247,1617053123
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:POST,2182,1617053155
-ERROR:main:Exception on /trabzon/borough [POST]
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:PUT,1858,1617145733
+ERROR:main:Exception on /borough/ilce2 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:POST,2195,1617145789
+ERROR:main:Exception on /sehir1/borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:PUT,1786,1617145844
+ERROR:main:Exception on /sehir1/ilce2 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:POST,1928,1617145884
+ERROR:main:Exception on /sehir1/borough [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -210,7 +259,8 @@ Traceback (most recent call last):
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
 WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /borough [POST]
+INFO:restAPI:POST,2124,1617145988
+ERROR:main:Exception on /sehir1/borough [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -221,10 +271,9 @@ Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:POST,1959,1617054001
-INFO:kafka.client:Closing idle connection 1001, last active 27470879 ms ago
 WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /borough [POST]
+WARNING:kafka.client:Unable to send to wakeup socket!
+ERROR:main:Exception on /sehir2/borough [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -235,10 +284,9 @@ Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:POST,2214,1617092184
-INFO:restAPI:GET,2846,1617092217
-INFO:restAPI:GET,2475,1617092232
-ERROR:main:Exception on /city [GET]
+INFO:restAPI:POST,1965,1617146059
+INFO:restAPI:PUT,1620,1617146096
+ERROR:main:Exception on /sehir2/ilce2 [PUT]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -249,32 +297,8 @@ Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:GET,2549,1617092246
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 59, in set_city
-    mong_obj.getCity(request.args)
-  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 23, in getCity
-    return result
-NameError: name 'result' is not defined
-INFO:restAPI:GET,2922,1617092397
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [GET]
+INFO:restAPI:PUT,1892,1617146110
+ERROR:main:Exception on /sehir1/ilce2 [PUT]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -285,9 +309,9 @@ Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:GET,2869,1617092450
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [GET]
+INFO:restAPI:DELETE,1014,1617146150
+INFO:restAPI:POST,2096,1617146176
+ERROR:main:Exception on /sehir2/borough [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -298,9 +322,9 @@ Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:GET,2673,1617092520
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [GET]
+INFO:restAPI:DELETE,1062,1617146197
+INFO:restAPI:POST,2050,1617146218
+ERROR:main:Exception on /sehir1/borough [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -311,9 +335,32 @@ Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:GET,2969,1617092587
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [GET]
+INFO:restAPI:POST,2371,1617146281
+ERROR:main:Exception on /sehir1/borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:DELETE,1281,1617146345
+INFO:restAPI:POST,2319,1617146375
+ERROR:main:Exception on /sehir1/borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+ERROR:main:Exception on /sehir1/borough' [GET]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -329,471 +376,21 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 61, in set_city
-    return jsonify(response_json)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 370, in jsonify
-    dumps(data, indent=indent, separators=separators) + "\n",
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 211, in dumps
-    rv = _json.dumps(obj, **kwargs)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 100, in default
-    return _json.JSONEncoder.default(self, o)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
-    raise TypeError(f'Object of type {o.__class__.__name__} '
-TypeError: Object of type ObjectId is not JSON serializable
-INFO:restAPI:GET,2785,1617092747
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 62, in set_city
-    return jsonify(response_json)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 370, in jsonify
-    dumps(data, indent=indent, separators=separators) + "\n",
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 211, in dumps
-    rv = _json.dumps(obj, **kwargs)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 100, in default
-    return _json.JSONEncoder.default(self, o)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
-    raise TypeError(f'Object of type {o.__class__.__name__} '
-TypeError: Object of type ObjectId is not JSON serializable
-INFO:restAPI:GET,2898,1617092768
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 63, in set_city
-    return jsonify(response_json)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 370, in jsonify
-    dumps(data, indent=indent, separators=separators) + "\n",
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 211, in dumps
-    rv = _json.dumps(obj, **kwargs)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 100, in default
-    return _json.JSONEncoder.default(self, o)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
-    raise TypeError(f'Object of type {o.__class__.__name__} '
-TypeError: Object of type ObjectId is not JSON serializable
-INFO:restAPI:GET,2693,1617092794
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 63, in set_city
-    js=jsonify(response_json)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 370, in jsonify
-    dumps(data, indent=indent, separators=separators) + "\n",
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 211, in dumps
-    rv = _json.dumps(obj, **kwargs)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 100, in default
-    return _json.JSONEncoder.default(self, o)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
-    raise TypeError(f'Object of type {o.__class__.__name__} '
-TypeError: Object of type ObjectId is not JSON serializable
-INFO:restAPI:GET,2478,1617092822
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 64, in set_city
-    js=json.dumps(response_json)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 231, in dumps
-    return _default_encoder.encode(obj)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
-    raise TypeError(f'Object of type {o.__class__.__name__} '
-TypeError: Object of type ObjectId is not JSON serializable
-INFO:restAPI:GET,2636,1617093056
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2574,1617093263
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2721,1617093302
-INFO:restAPI:GET,2438,1617094048
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2847,1617094069
-INFO:restAPI:GET,2565,1617094086
-INFO:restAPI:GET,2521,1617094097
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2828,1617095403
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2704,1617095446
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2851,1617095464
-INFO:restAPI:GET,2502,1617095533
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2587,1617095557
-INFO:restAPI:GET,2468,1617095579
-INFO:restAPI:GET,2723,1617095608
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /trabzon/borough [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 84, in set_borough_with_city_name
-    result=mong_obj.getBorough(content,city_name)
-  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 30, in getBorough
-    args["cityId"]=city["_id"]
+  File "main.py", line 113, in set_borough_with_city_name
+    args_dict=add_value(request.args,["name"],[borough_name])
+  File "main.py", line 41, in add_value
+    args[entity_name_list[index]]=value_list[index]
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 200, in __setitem__
     is_immutable(self)
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 36, in is_immutable
     raise TypeError("%r objects are immutable" % self.__class__.__name__)
 TypeError: 'ImmutableMultiDict' objects are immutable
-INFO:restAPI:GET,2825,1617095626
+INFO:restAPI:GET,2668,1617146381
+INFO:restAPI:DELETE,1322,1617146395
 WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /trabzon/borough [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 85, in set_borough_with_city_name
-    result=mong_obj.getBorough(content,city_name)
-  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 30, in getBorough
-    args["cityId"]=city["_id"]
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 200, in __setitem__
-    is_immutable(self)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 36, in is_immutable
-    raise TypeError("%r objects are immutable" % self.__class__.__name__)
-TypeError: 'ImmutableMultiDict' objects are immutable
-INFO:restAPI:GET,2622,1617095643
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2575,1617095704
-ERROR:main:Exception on /trabzon/borough [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 87, in set_borough_with_city_name
-    return jsonify(result_json)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 370, in jsonify
-    dumps(data, indent=indent, separators=separators) + "\n",
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 211, in dumps
-    rv = _json.dumps(obj, **kwargs)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 100, in default
-    return _json.JSONEncoder.default(self, o)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
-    raise TypeError(f'Object of type {o.__class__.__name__} '
-TypeError: Object of type ObjectId is not JSON serializable
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2691,1617095721
-ERROR:main:Exception on /trabzon/borough [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 87, in set_borough_with_city_name
-    return jsonify(result_json)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 370, in jsonify
-    dumps(data, indent=indent, separators=separators) + "\n",
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 211, in dumps
-    rv = _json.dumps(obj, **kwargs)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 100, in default
-    return _json.JSONEncoder.default(self, o)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
-    raise TypeError(f'Object of type {o.__class__.__name__} '
-TypeError: Object of type ObjectId is not JSON serializable
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2991,1617095773
-ERROR:main:Exception on /trabzon/borough [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 87, in set_borough_with_city_name
-    return jsonify(result_json)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 370, in jsonify
-    dumps(data, indent=indent, separators=separators) + "\n",
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 211, in dumps
-    rv = _json.dumps(obj, **kwargs)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 100, in default
-    return _json.JSONEncoder.default(self, o)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
-    raise TypeError(f'Object of type {o.__class__.__name__} '
-TypeError: Object of type ObjectId is not JSON serializable
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2877,1617095822
-ERROR:main:Exception on /trabzon/borough [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 87, in set_borough_with_city_name
-    js=jsonify(result_json)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 370, in jsonify
-    dumps(data, indent=indent, separators=separators) + "\n",
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 211, in dumps
-    rv = _json.dumps(obj, **kwargs)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 100, in default
-    return _json.JSONEncoder.default(self, o)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
-    raise TypeError(f'Object of type {o.__class__.__name__} '
-TypeError: Object of type ObjectId is not JSON serializable
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2771,1617095877
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2544,1617095909
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /trabzon/of [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 81, in set_borough_with_city_name
-    content["name"]=name
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 200, in __setitem__
-    is_immutable(self)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 36, in is_immutable
-    raise TypeError("%r objects are immutable" % self.__class__.__name__)
-TypeError: 'ImmutableMultiDict' objects are immutable
-INFO:restAPI:GET,2496,1617095970
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /trabzon/of [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 82, in set_borough_with_city_name
-    content["name"]=name
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 200, in __setitem__
-    is_immutable(self)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 36, in is_immutable
-    raise TypeError("%r objects are immutable" % self.__class__.__name__)
-TypeError: 'ImmutableMultiDict' objects are immutable
-INFO:restAPI:GET,2880,1617096003
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /trabzon/of [GET]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "main.py", line 82, in set_borough_with_city_name
-    content["name"]=name
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 200, in __setitem__
-    is_immutable(self)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 36, in is_immutable
-    raise TypeError("%r objects are immutable" % self.__class__.__name__)
-TypeError: 'ImmutableMultiDict' objects are immutable
-INFO:restAPI:GET,2611,1617096018
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2795,1617096077
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2608,1617096293
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2791,1617096318
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2879,1617096348
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2786,1617096476
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:GET,2426,1617096496
-INFO:restAPI:GET,2578,1617096794
-INFO:restAPI:GET,2508,1617096825
-INFO:restAPI:GET,2679,1617096846
-INFO:restAPI:GET,2804,1617096943
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:PUT,1900,1617097595
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [PUT]
+INFO:restAPI:DELETE,1199,1617146451
+INFO:restAPI:POST,1933,1617146518
+ERROR:main:Exception on /sehir1/borough [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -804,8 +401,8 @@ Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:PUT,1815,1617097620
-ERROR:main:Exception on /city [PUT]
+INFO:restAPI:POST,1963,1617146523
+ERROR:main:Exception on /sehir2/borough [POST]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -816,80 +413,8 @@ Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:PUT,1458,1617097688
-WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [PUT]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
-    response = self.make_response(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
-    "The view function did not return a valid response. The"
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:PUT,1854,1617097825
-ERROR:main:Exception on /city [PUT]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
-    response = self.make_response(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
-    "The view function did not return a valid response. The"
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:PUT,1440,1617097844
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:PUT,1740,1617098359
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:PUT,1524,1617098486
-INFO:restAPI:PUT,1657,1617098512
-INFO:restAPI:PUT,1577,1617098533
-INFO:restAPI:POST,2400,1617099158
-ERROR:main:Exception on /city [POST]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
-    response = self.make_response(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
-    "The view function did not return a valid response. The"
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:DELETE,1054,1617099168
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:DELETE,951,1617099220
-WARNING:kafka.client:Unable to send to wakeup socket!
-INFO:restAPI:DELETE,1190,1617099240
-ERROR:main:Exception on /rize [DELETE]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
-    response = self.make_response(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
-    "The view function did not return a valid response. The"
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-ERROR:main:Exception on /city [POST]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
-    response = self.make_response(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
-    "The view function did not return a valid response. The"
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:POST,2391,1617099277
-INFO:restAPI:DELETE,1130,1617099288
-ERROR:main:Exception on /rize [DELETE]
+INFO:restAPI:PUT,1535,1617147458
+ERROR:main:Exception on /sehir1/ilce2/update/name/ilce3 [PUT]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -901,7 +426,8 @@ Traceback (most recent call last):
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
 WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [POST]
+INFO:restAPI:PUT,1596,1617147511
+ERROR:main:Exception on /sehir1/ilce2/update/name/ilce3 [PUT]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -912,23 +438,9 @@ Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:POST,2255,1617099329
-INFO:restAPI:DELETE,1123,1617099339
-INFO:restAPI:POST,2089,1617099368
-ERROR:main:Exception on /city [POST]
-Traceback (most recent call last):
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
-    response = self.make_response(rv)
-  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
-    "The view function did not return a valid response. The"
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:DELETE,1038,1617099379
 WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [POST]
+INFO:restAPI:PUT,1652,1617147532
+ERROR:main:Exception on /sehir1/ilce2/update/name/ilce3 [PUT]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -939,10 +451,8 @@ Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:POST,2070,1617099406
-INFO:restAPI:DELETE,1070,1617099416
 WARNING:kafka.client:Unable to send to wakeup socket!
-ERROR:main:Exception on /city [POST]
+ERROR:main:Exception on /sehir1/ilce2/update/name/ilce3 [PUT]
 Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -953,6 +463,57 @@ Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-INFO:restAPI:POST,2127,1617099527
-INFO:restAPI:DELETE,992,1617099537
+INFO:restAPI:PUT,1824,1617147590
+INFO:restAPI:PUT,1462,1617147611
+ERROR:main:Exception on /sehir2/ilce2/update/name/ilce4 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:GET,2635,1617148852
+INFO:kafka.client:Closing idle connection 1001, last active 23511007 ms ago
 WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:GET,2947,1617180530
+INFO:restAPI:POST,2289,1617180578
+ERROR:main:Exception on /sehir2/borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:POST,2215,1617180930
+ERROR:main:Exception on /sehir2/borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:POST,2230,1617182874
+ERROR:main:Exception on /sehir3 [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.

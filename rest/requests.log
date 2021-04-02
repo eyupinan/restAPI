@@ -517,3 +517,1724 @@ Traceback (most recent call last):
   File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
     "The view function did not return a valid response. The"
 TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+ERROR:werkzeug:127.0.0.1 - - [31/Mar/2021 16:20:45] code 400, message Bad request version ('ò\x96çE6:\x9cð\x00b\x13\x01\x13\x02\x13\x03À,À+Ì©À0Ì¨\x00\x9dÀ.À2\x00\x9fÌª\x00£À/\x00\x9cÀ-À1\x00\x9e\x00¢À$À(\x00=À&À*\x00k\x00jÀ')
+INFO:restAPI:GET,2773,1617196862
+INFO:restAPI:GET,2960,1617196892
+INFO:restAPI:GET,2577,1617198398
+INFO:restAPI:GET,2714,1617198808
+INFO:restAPI:POST,2200,1617198881
+ERROR:main:Exception on /sehir4 [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:PUT,1671,1617198931
+ERROR:main:Exception on /sehir4 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "main.py", line 86, in set_city
+    state=mong_obj.updateCity(args_dict,content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 37, in updateCity
+    self.cities_col.update(que,new_values)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 3327, in update
+    write_concern, collation=collation)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 870, in _update_retryable
+    _update, session)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 866, in _update
+    retryable_write=retryable_write)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 837, in _update
+    _check_write_command_response(result)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\helpers.py", line 208, in _raise_last_write_error
+    raise WriteError(error.get("errmsg"), error.get("code"), error)
+pymongo.errors.WriteError: '$set' is empty. You must specify a field like so: {$set: {<field>: ...}}, full error: {'index': 0, 'code': 9, 'errmsg': "'$set' is empty. You must specify a field like so: {$set: {<field>: ...}}"}
+INFO:restAPI:PUT,1885,1617198982
+INFO:restAPI:PUT,1811,1617199035
+ERROR:main:Exception on /sehir4/update [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "main.py", line 122, in set_borough_with_city_name
+    mong_obj.updateBorough(args_dict,content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 55, in updateBorough
+    self.boroughs_col.update_many(que,new_values)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1100, in update_many
+    hint=hint, session=session),
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 870, in _update_retryable
+    _update, session)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 866, in _update
+    retryable_write=retryable_write)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 837, in _update
+    _check_write_command_response(result)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\helpers.py", line 208, in _raise_last_write_error
+    raise WriteError(error.get("errmsg"), error.get("code"), error)
+pymongo.errors.WriteError: '$set' is empty. You must specify a field like so: {$set: {<field>: ...}}, full error: {'index': 0, 'code': 9, 'errmsg': "'$set' is empty. You must specify a field like so: {$set: {<field>: ...}}"}
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1609,1617199081
+INFO:restAPI:PUT,1832,1617199125
+INFO:restAPI:PUT,1578,1617199164
+ERROR:main:Exception on /sehir4/update;population=3311 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "main.py", line 122, in set_borough_with_city_name
+    mong_obj.updateBorough(args_dict,content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 55, in updateBorough
+    self.boroughs_col.update_many(que,new_values)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1100, in update_many
+    hint=hint, session=session),
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 870, in _update_retryable
+    _update, session)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 866, in _update
+    retryable_write=retryable_write)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 837, in _update
+    _check_write_command_response(result)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\helpers.py", line 208, in _raise_last_write_error
+    raise WriteError(error.get("errmsg"), error.get("code"), error)
+pymongo.errors.WriteError: '$set' is empty. You must specify a field like so: {$set: {<field>: ...}}, full error: {'index': 0, 'code': 9, 'errmsg': "'$set' is empty. You must specify a field like so: {$set: {<field>: ...}}"}
+INFO:restAPI:PUT,1704,1617199975
+ERROR:main:Exception on /sehir4 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "main.py", line 86, in set_city
+    state=mong_obj.updateCity(args_dict,content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 37, in updateCity
+    self.cities_col.update(que,new_values)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 3327, in update
+    write_concern, collation=collation)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 870, in _update_retryable
+    _update, session)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 866, in _update
+    retryable_write=retryable_write)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 837, in _update
+    _check_write_command_response(result)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\helpers.py", line 208, in _raise_last_write_error
+    raise WriteError(error.get("errmsg"), error.get("code"), error)
+pymongo.errors.WriteError: '$set' is empty. You must specify a field like so: {$set: {<field>: ...}}, full error: {'index': 0, 'code': 9, 'errmsg': "'$set' is empty. You must specify a field like so: {$set: {<field>: ...}}"}
+INFO:restAPI:PUT,1415,1617227852
+INFO:restAPI:PUT,1690,1617227997
+INFO:restAPI:PUT,1688,1617228035
+INFO:restAPI:PUT,1896,1617228053
+INFO:restAPI:PUT,1411,1617228104
+INFO:restAPI:PUT,1673,1617228120
+INFO:kafka.client:Closing idle connection 1001, last active 30194291 ms ago
+WARNING:kafka.client:Unable to send to wakeup socket!
+WARNING:kafka.client:Unable to send to wakeup socket!
+ERROR:main:Exception on /sehir5 [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "main.py", line 77, in set_city
+    mong_obj.setCity(args_dict,content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 28, in setCity
+    self.db.cities.insert_one(que)
+AttributeError: 'PyMongo' object has no attribute 'cities'
+INFO:restAPI:POST,2237,1617276066
+ERROR:main:Exception on /sehir5 [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "main.py", line 77, in set_city
+    mong_obj.setCity(args_dict,content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 28, in setCity
+    self.db.cities.insert_one(que)
+AttributeError: 'PyMongo' object has no attribute 'cities'
+INFO:restAPI:POST,2013,1617276111
+ERROR:main:Exception on /sehir5 [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "main.py", line 77, in set_city
+    mong_obj.setCity(args_dict,content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 28, in setCity
+    self.db.cities.insert_one(que)
+AttributeError: 'PyMongo' object has no attribute 'cities'
+INFO:restAPI:POST,2058,1617276162
+ERROR:main:Exception on /sehir5 [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+INFO:restAPI:POST,1903,1617276198
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,2120,1617276305
+ERROR:main:Exception on /sehir5 [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:GET,2656,1617280861
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:GET,2872,1617280883
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:GET,2939,1617281082
+INFO:restAPI:GET,2699,1617281082
+INFO:restAPI:GET,2729,1617281083
+INFO:restAPI:GET,2594,1617281083
+INFO:restAPI:GET,2806,1617281083
+INFO:restAPI:GET,2612,1617281084
+INFO:restAPI:GET,2850,1617281083
+INFO:restAPI:GET,2649,1617281084
+INFO:restAPI:GET,2924,1617281084
+INFO:restAPI:GET,2434,1617281085
+INFO:restAPI:GET,2769,1617281085
+INFO:restAPI:GET,2936,1617281085
+INFO:restAPI:GET,2544,1617281120
+INFO:restAPI:GET,2631,1617281135
+INFO:restAPI:GET,2949,1617281139
+INFO:restAPI:GET,2692,1617281142
+WARNING:kafka.client:Unable to send to wakeup socket!
+ERROR:main:Exception on /borough/of [GET]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 30, in set_borough_with_city_name
+    args_dict=add_value(request.args,["name"],[borough_name])
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 11, in add_value
+    args[entity_name_list[index]]=value_list[index]
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 200, in __setitem__
+    is_immutable(self)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 36, in is_immutable
+    raise TypeError("%r objects are immutable" % self.__class__.__name__)
+TypeError: 'ImmutableMultiDict' objects are immutable
+INFO:restAPI:GET,2539,1617285850
+ERROR:main:Exception on /borough/of [GET]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 31, in set_borough_with_city_name
+    args_dict=add_value(request.args,["name"],[borough_name])
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 11, in add_value
+    args[entity_name_list[index]]=value_list[index]
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 200, in __setitem__
+    is_immutable(self)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 36, in is_immutable
+    raise TypeError("%r objects are immutable" % self.__class__.__name__)
+TypeError: 'ImmutableMultiDict' objects are immutable
+INFO:restAPI:GET,2939,1617285873
+ERROR:main:Exception on /borough/of [GET]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 31, in set_borough_with_city_name
+    args_dict=add_value(request.args,["name"],[borough_name])
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 11, in add_value
+    args[entity_name_list[index]]=value_list[index]
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 200, in __setitem__
+    is_immutable(self)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 36, in is_immutable
+    raise TypeError("%r objects are immutable" % self.__class__.__name__)
+TypeError: 'ImmutableMultiDict' objects are immutable
+INFO:restAPI:GET,2568,1617286046
+ERROR:main:Exception on /borough/of [GET]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 32, in set_borough_with_city_name
+    args_dict=add_value(request.args,["name"],[borough_name])
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 11, in add_value
+    args[entity_name_list[index]]=value_list[index]
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 200, in __setitem__
+    is_immutable(self)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\datastructures.py", line 36, in is_immutable
+    raise TypeError("%r objects are immutable" % self.__class__.__name__)
+TypeError: 'ImmutableMultiDict' objects are immutable
+INFO:restAPI:GET,2546,1617286131
+INFO:restAPI:GET,2549,1617286193
+INFO:restAPI:GET,2643,1617302984
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:GET,2667,1617303019
+INFO:restAPI:GET,2525,1617303048
+INFO:restAPI:GET,2882,1617303072
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:GET,2931,1617303104
+INFO:restAPI:GET,2485,1617303167
+INFO:restAPI:GET,2635,1617303187
+INFO:restAPI:GET,2435,1617303267
+INFO:restAPI:GET,2535,1617303328
+INFO:restAPI:GET,2897,1617303351
+INFO:restAPI:GET,2537,1617303384
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:GET,2829,1617303514
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:GET,2579,1617303539
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,2230,1617305088
+INFO:restAPI:POST,2149,1617305106
+INFO:restAPI:POST,2173,1617305125
+INFO:restAPI:POST,1938,1617305160
+INFO:restAPI:POST,2158,1617305187
+INFO:restAPI:POST,2011,1617305217
+INFO:restAPI:POST,2133,1617305266
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,2169,1617305388
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,1921,1617305418
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,2111,1617305452
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,2359,1617305510
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,2355,1617305525
+INFO:restAPI:POST,2019,1617305551
+INFO:restAPI:POST,2353,1617305560
+INFO:restAPI:POST,2398,1617305804
+WARNING:kafka.client:Unable to send to wakeup socket!
+ERROR:main:Exception on /city/sehir5 [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\wrappers\json.py", line 119, in get_json
+    rv = self.json_module.loads(data)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\json\__init__.py", line 253, in loads
+    return _json.loads(s, **kwargs)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 361, in loads
+    return cls(**kw).decode(s)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 23, in set_city
+    content = request.get_json(force=True)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\werkzeug\wrappers\json.py", line 128, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\wrappers.py", line 27, in on_json_loading_failed
+    raise BadRequest()
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 26, in set_city
+    print(content)
+UnboundLocalError: local variable 'content' referenced before assignment
+INFO:restAPI:POST,2058,1617305832
+INFO:restAPI:PUT,1526,1617307097
+INFO:restAPI:PUT,1627,1617307129
+INFO:restAPI:PUT,1554,1617307195
+INFO:restAPI:PUT,1734,1617307212
+INFO:restAPI:GET,2965,1617347644
+INFO:restAPI:GET,2799,1617347655
+INFO:restAPI:GET,2753,1617347688
+INFO:restAPI:GET,2512,1617347719
+INFO:restAPI:GET,2779,1617347747
+INFO:restAPI:GET,2524,1617347768
+INFO:restAPI:GET,2564,1617347794
+INFO:restAPI:GET,2874,1617347863
+INFO:restAPI:POST,2041,1617347899
+INFO:restAPI:POST,2112,1617347912
+ERROR:main:Exception on /city/yozgat [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 24, in cities
+    state=self.mong_obj.setCity(content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 22, in setCity
+    if len(found)!=0:
+TypeError: object of type 'Cursor' has no len()
+INFO:restAPI:POST,1983,1617348275
+WARNING:kafka.client:Unable to send to wakeup socket!
+ERROR:main:Exception on /city/yozgat [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 25, in cities
+    state=self.mong_obj.setCity(content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 22, in setCity
+    if len(found)!=0:
+TypeError: object of type 'Cursor' has no len()
+INFO:restAPI:POST,1937,1617348319
+ERROR:main:Exception on /city/yozgat [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 25, in cities
+    state=self.mong_obj.setCity(content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 22, in setCity
+    if len(found)!=0:
+TypeError: object of type 'Cursor' has no len()
+INFO:restAPI:POST,1973,1617348362
+ERROR:main:Exception on /city/yozgat [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 25, in cities
+    state=self.mong_obj.setCity(content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 24, in setCity
+    if len(found)!=0:
+TypeError: object of type 'Cursor' has no len()
+INFO:restAPI:POST,2229,1617348377
+ERROR:main:Exception on /city/yozgat [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 25, in cities
+    state=self.mong_obj.setCity(content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 25, in setCity
+    if len(found)!=0:
+TypeError: object of type 'Cursor' has no len()
+INFO:restAPI:POST,2361,1617348406
+INFO:restAPI:POST,2375,1617348432
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,2173,1617349120
+INFO:restAPI:POST,2309,1617349185
+INFO:restAPI:POST,2110,1617349230
+INFO:restAPI:POST,2312,1617349247
+INFO:restAPI:POST,2088,1617349401
+ERROR:main:Exception on /city/sehir3/borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 27, in borough
+    state=self.mong_obj.setBorough(content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 57, in setBorough
+    if len(found)!=0:
+TypeError: object of type 'Cursor' has no len()
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,1927,1617349438
+ERROR:main:Exception on /city/sehir3/borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 28, in borough
+    state=self.mong_obj.setBorough(content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 57, in setBorough
+    if len(found)!=0:
+TypeError: object of type 'Cursor' has no len()
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,2032,1617349453
+ERROR:main:Exception on /city/sehir3/borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 29, in borough
+    state=self.mong_obj.setBorough(content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 57, in setBorough
+    if len(found)!=0:
+TypeError: object of type 'Cursor' has no len()
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,1901,1617349472
+ERROR:main:Exception on /city/sehir3/borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 29, in borough
+    state=self.mong_obj.setBorough(content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 57, in setBorough
+    if len(found)!=0:
+TypeError: object of type 'Cursor' has no len()
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,2208,1617349531
+INFO:restAPI:POST,1950,1617350568
+INFO:restAPI:POST,2376,1617350630
+ERROR:main:Exception on /city/sehir7/borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 27, in borough
+    state=self.mong_obj.setBorough(content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 54, in setBorough
+    new_item=add_ref(self.db.cities,content,ref,"name","cityId")
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 14, in add_ref
+    content[content_ref_name]=item["_id"]
+TypeError: 'NoneType' object is not subscriptable
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,2279,1617350654
+ERROR:main:Exception on /city/sehir7/borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 27, in borough
+    state=self.mong_obj.setBorough(content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 55, in setBorough
+    new_item=add_ref(self.db.cities,content,ref,"name","cityId")
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 15, in add_ref
+    content[content_ref_name]=item["_id"]
+TypeError: 'NoneType' object is not subscriptable
+ERROR:main:Exception on /city/sehir7/borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 27, in borough
+    state=self.mong_obj.setBorough(content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 55, in setBorough
+    if len(ref)!=0:
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 15, in add_ref
+    return 404
+TypeError: 'NoneType' object is not subscriptable
+INFO:restAPI:POST,2281,1617351637
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:POST,1978,1617351657
+INFO:restAPI:POST,2123,1617353008
+INFO:restAPI:POST,2133,1617353097
+INFO:restAPI:PUT,1433,1617353144
+INFO:restAPI:PUT,1736,1617353156
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1582,1617353394
+INFO:restAPI:PUT,1808,1617353428
+INFO:restAPI:PUT,1804,1617353628
+INFO:restAPI:PUT,1879,1617353666
+INFO:restAPI:PUT,1402,1617353718
+ERROR:main:Exception on /city [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 47, in cities
+    state=self.mong_obj.updateCity(args_dict,content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 36, in updateCity
+    found=self.db.find(que)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 3444, in __call__
+    self.__name)
+TypeError: 'Collection' object is not callable. If you meant to call the 'find' method on a 'Database' object it is failing because no such method exists.
+INFO:restAPI:PUT,1822,1617353752
+INFO:restAPI:PUT,1526,1617353782
+ERROR:main:Exception on /city [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 45, in cities
+    state=self.mong_obj.updateCity(args_dict,content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 36, in updateCity
+    found=self.db.find(que)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 3444, in __call__
+    self.__name)
+TypeError: 'Collection' object is not callable. If you meant to call the 'find' method on a 'Database' object it is failing because no such method exists.
+INFO:restAPI:PUT,1894,1617353816
+ERROR:main:Exception on /city [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 45, in cities
+    state=self.mong_obj.updateCity(args_dict,content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 35, in updateCity
+    found=self.db.find(que)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 3444, in __call__
+    self.__name)
+TypeError: 'Collection' object is not callable. If you meant to call the 'find' method on a 'Database' object it is failing because no such method exists.
+INFO:restAPI:PUT,1824,1617353912
+ERROR:main:Exception on /city [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 45, in cities
+    state=self.mong_obj.updateCity(args_dict,content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 36, in updateCity
+    found=self.db.find(que)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 3444, in __call__
+    self.__name)
+TypeError: 'Collection' object is not callable. If you meant to call the 'find' method on a 'Database' object it is failing because no such method exists.
+INFO:restAPI:PUT,1854,1617353951
+ERROR:main:Exception on /city [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 45, in cities
+    state=self.mong_obj.updateCity(args_dict,content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 37, in updateCity
+    found=self.db.find(que)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 3444, in __call__
+    self.__name)
+TypeError: 'Collection' object is not callable. If you meant to call the 'find' method on a 'Database' object it is failing because no such method exists.
+INFO:restAPI:PUT,1846,1617353964
+ERROR:main:Exception on /city [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 45, in cities
+    state=self.mong_obj.updateCity(args_dict,content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 41, in updateCity
+    print(found)
+UnboundLocalError: local variable 'found' referenced before assignment
+INFO:restAPI:PUT,1843,1617353994
+INFO:restAPI:PUT,1772,1617354017
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1409,1617354064
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1795,1617354207
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1759,1617354256
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1747,1617354270
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1436,1617354296
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1449,1617354315
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1580,1617354331
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1721,1617354358
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1811,1617354380
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1820,1617354429
+INFO:restAPI:PUT,1658,1617354590
+INFO:restAPI:PUT,1407,1617354605
+INFO:restAPI:GET,2613,1617354635
+INFO:restAPI:GET,2449,1617354643
+INFO:restAPI:GET,2651,1617354662
+INFO:restAPI:GET,2751,1617354700
+INFO:restAPI:PUT,1530,1617354704
+INFO:restAPI:PUT,1867,1617354722
+INFO:restAPI:PUT,1561,1617354864
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1592,1617355689
+INFO:restAPI:DELETE,1102,1617359780
+INFO:restAPI:DELETE,1330,1617359815
+INFO:restAPI:DELETE,1029,1617359861
+INFO:restAPI:DELETE,1029,1617359904
+INFO:restAPI:DELETE,973,1617360196
+INFO:restAPI:DELETE,939,1617360213
+INFO:restAPI:POST,2362,1617360412
+INFO:restAPI:POST,2339,1617360421
+INFO:restAPI:POST,2400,1617360431
+INFO:restAPI:POST,2119,1617360440
+INFO:restAPI:POST,1942,1617360457
+INFO:restAPI:POST,2181,1617360465
+INFO:restAPI:POST,2223,1617360477
+INFO:restAPI:POST,1903,1617360485
+INFO:restAPI:GET,2996,1617361273
+INFO:restAPI:GET,2987,1617361290
+INFO:restAPI:GET,2555,1617361314
+INFO:restAPI:GET,2492,1617361340
+INFO:restAPI:GET,2455,1617361351
+INFO:restAPI:GET,2481,1617361371
+INFO:restAPI:GET,2430,1617361435
+INFO:restAPI:POST,2393,1617361447
+ERROR:main:Exception on /borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 27, in borough
+    state=self.mong_obj.setBorough(content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 69, in setBorough
+    if "name" in new_item:
+UnboundLocalError: local variable 'new_item' referenced before assignment
+INFO:restAPI:POST,1954,1617361488
+WARNING:kafka.client:Unable to send to wakeup socket!
+ERROR:main:Exception on /borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 29, in borough
+    state=self.mong_obj.setBorough(content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 69, in setBorough
+    if "name" in new_item:
+UnboundLocalError: local variable 'new_item' referenced before assignment
+INFO:restAPI:POST,2177,1617361661
+ERROR:main:Exception on /borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 29, in borough
+    state=self.mong_obj.setBorough(content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 71, in setBorough
+    if "name" in new_item:
+UnboundLocalError: local variable 'new_item' referenced before assignment
+INFO:restAPI:POST,1981,1617361720
+ERROR:main:Exception on /borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 29, in borough
+    state=self.mong_obj.setBorough(content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 73, in setBorough
+    if "name" in new_item:
+UnboundLocalError: local variable 'new_item' referenced before assignment
+INFO:restAPI:POST,2183,1617361743
+ERROR:main:Exception on /borough [POST]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 29, in borough
+    state=self.mong_obj.setBorough(content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 72, in setBorough
+    if "name" in new_item:
+UnboundLocalError: local variable 'new_item' referenced before assignment
+INFO:restAPI:POST,2279,1617361761
+INFO:restAPI:POST,2040,1617361825
+INFO:restAPI:POST,2166,1617361945
+INFO:restAPI:PUT,1608,1617362031
+INFO:restAPI:PUT,1481,1617362053
+INFO:restAPI:PUT,1728,1617362065
+INFO:restAPI:PUT,1685,1617362107
+ERROR:main:Exception on /city/sehir8/borough/ilce7 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 47, in borough
+    state=self.mong_obj.updateBorough(args_dict,content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 82, in updateBorough
+    found=self.db.boroughs.find(referenced_que)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1523, in find
+    return Cursor(self, *args, **kwargs)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\cursor.py", line 144, in __init__
+    validate_is_mapping("filter", spec)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\common.py", line 496, in validate_is_mapping
+    "collections.Mapping" % (option,))
+TypeError: filter must be an instance of dict, bson.son.SON, or any other type that inherits from collections.Mapping
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1751,1617362150
+ERROR:main:Exception on /city/sehir8/borough/ilce7 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 50, in borough
+    state=self.mong_obj.updateBorough(args_dict,content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 82, in updateBorough
+    found=self.db.boroughs.find(referenced_que)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1523, in find
+    return Cursor(self, *args, **kwargs)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\cursor.py", line 144, in __init__
+    validate_is_mapping("filter", spec)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\common.py", line 496, in validate_is_mapping
+    "collections.Mapping" % (option,))
+TypeError: filter must be an instance of dict, bson.son.SON, or any other type that inherits from collections.Mapping
+INFO:restAPI:PUT,1535,1617362173
+ERROR:main:Exception on /city/sehir8/borough/ilce8 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 50, in borough
+    state=self.mong_obj.updateBorough(args_dict,content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 82, in updateBorough
+    found=self.db.boroughs.find(referenced_que)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1523, in find
+    return Cursor(self, *args, **kwargs)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\cursor.py", line 144, in __init__
+    validate_is_mapping("filter", spec)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\common.py", line 496, in validate_is_mapping
+    "collections.Mapping" % (option,))
+TypeError: filter must be an instance of dict, bson.son.SON, or any other type that inherits from collections.Mapping
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1588,1617362191
+ERROR:main:Exception on /city/sehir8/borough/ilce8 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 50, in borough
+    state=self.mong_obj.updateBorough(args_dict,content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 82, in updateBorough
+    found=self.db.boroughs.find(referenced_que)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1523, in find
+    return Cursor(self, *args, **kwargs)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\cursor.py", line 144, in __init__
+    validate_is_mapping("filter", spec)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\common.py", line 496, in validate_is_mapping
+    "collections.Mapping" % (option,))
+TypeError: filter must be an instance of dict, bson.son.SON, or any other type that inherits from collections.Mapping
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1471,1617362237
+ERROR:main:Exception on /city/sehir8/borough/ilce8 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 50, in borough
+    state=self.mong_obj.updateBorough(args_dict,content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 82, in updateBorough
+    found=list(self.db.boroughs.find(referenced_que))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1523, in find
+    return Cursor(self, *args, **kwargs)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\cursor.py", line 144, in __init__
+    validate_is_mapping("filter", spec)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\common.py", line 496, in validate_is_mapping
+    "collections.Mapping" % (option,))
+TypeError: filter must be an instance of dict, bson.son.SON, or any other type that inherits from collections.Mapping
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1747,1617362251
+ERROR:main:Exception on /city/sehir8/borough/ilce8 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\boroughs.py", line 50, in borough
+    state=self.mong_obj.updateBorough(args_dict,content,ref)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 83, in updateBorough
+    found=list(self.db.boroughs.find(referenced_que))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1523, in find
+    return Cursor(self, *args, **kwargs)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\cursor.py", line 144, in __init__
+    validate_is_mapping("filter", spec)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\common.py", line 496, in validate_is_mapping
+    "collections.Mapping" % (option,))
+TypeError: filter must be an instance of dict, bson.son.SON, or any other type that inherits from collections.Mapping
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1431,1617362457
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1695,1617362897
+INFO:restAPI:PUT,1864,1617364029
+INFO:restAPI:PUT,1760,1617364092
+INFO:restAPI:PUT,1540,1617364309
+INFO:restAPI:PUT,1562,1617364348
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1591,1617364433
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1507,1617364463
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1869,1617364501
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1807,1617364555
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1462,1617364609
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1438,1617364653
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1452,1617364761
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1536,1617364861
+INFO:restAPI:PUT,1500,1617364873
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1763,1617364946
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1523,1617366123
+INFO:restAPI:PUT,1408,1617366154
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1477,1617366214
+ERROR:main:Exception on /city/sehir9/borough/ilce9 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1418,1617366247
+ERROR:main:Exception on /city/sehir9/borough/ilce9 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1606,1617366275
+ERROR:main:Exception on /city/sehir9/borough/ilce9 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1499,1617366303
+ERROR:main:Exception on /city/sehir9/borough/ilce9 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1757,1617366327
+ERROR:main:Exception on /city/sehir9/borough/ilce9 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1644,1617366393
+ERROR:main:Exception on /city/sehir9/borough/ilce9 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1718,1617366417
+ERROR:main:Exception on /city/sehir9/borough/ilce9 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1781,1617366777
+INFO:restAPI:PUT,1699,1617366795
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1758,1617366969
+INFO:restAPI:PUT,1658,1617367024
+INFO:restAPI:PUT,1563,1617367073
+INFO:restAPI:PUT,1891,1617367078
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1778,1617367100
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1656,1617367133
+INFO:restAPI:PUT,1738,1617367169
+INFO:restAPI:PUT,1576,1617367181
+INFO:restAPI:PUT,1471,1617367199
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1487,1617367242
+INFO:restAPI:PUT,1883,1617367276
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:DELETE,1361,1617369406
+ERROR:main:Exception on /city/sehir11 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 55, in cities
+    state=self.mong_obj.deleteCity(content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 59, in deleteCity
+    self.db.boroughs.update_many({"cityId":_id},{"$unset":{"cityId":_id}} , {"multi": True})
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1100, in update_many
+    hint=hint, session=session),
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 870, in _update_retryable
+    _update, session)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 866, in _update
+    retryable_write=retryable_write)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 770, in _update
+    common.validate_boolean("upsert", upsert)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\common.py", line 163, in validate_boolean
+    raise TypeError("%s must be True or False" % (option,))
+TypeError: upsert must be True or False
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:DELETE,1099,1617369433
+ERROR:main:Exception on /city/sehir11 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 55, in cities
+    state=self.mong_obj.deleteCity(content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 60, in deleteCity
+    self.db.boroughs.update_many({"cityId":_id},{"$unset":{"cityId":_id}} , {"multi": True})
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1100, in update_many
+    hint=hint, session=session),
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 870, in _update_retryable
+    _update, session)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 866, in _update
+    retryable_write=retryable_write)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 770, in _update
+    common.validate_boolean("upsert", upsert)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\common.py", line 163, in validate_boolean
+    raise TypeError("%s must be True or False" % (option,))
+TypeError: upsert must be True or False
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:DELETE,902,1617369451
+ERROR:main:Exception on /city/sehir11 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 55, in cities
+    state=self.mong_obj.deleteCity(content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 61, in deleteCity
+    self.db.boroughs.update_many({"cityId":_id},{"$unset":{"cityId":_id}} , {"multi": True})
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1100, in update_many
+    hint=hint, session=session),
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 870, in _update_retryable
+    _update, session)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 866, in _update
+    retryable_write=retryable_write)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 770, in _update
+    common.validate_boolean("upsert", upsert)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\common.py", line 163, in validate_boolean
+    raise TypeError("%s must be True or False" % (option,))
+TypeError: upsert must be True or False
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:DELETE,1308,1617369465
+ERROR:main:Exception on /city/sehir11 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 55, in cities
+    state=self.mong_obj.deleteCity(content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 62, in deleteCity
+    self.db.boroughs.update_many({"cityId":_id},{"$unset":{"cityId":_id}} , {"multi": True})
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1100, in update_many
+    hint=hint, session=session),
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 870, in _update_retryable
+    _update, session)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 866, in _update
+    retryable_write=retryable_write)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 770, in _update
+    common.validate_boolean("upsert", upsert)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\common.py", line 163, in validate_boolean
+    raise TypeError("%s must be True or False" % (option,))
+TypeError: upsert must be True or False
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:DELETE,1355,1617369519
+ERROR:main:Exception on /city/sehir11 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 55, in cities
+    state=self.mong_obj.deleteCity(content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 63, in deleteCity
+    self.db.boroughs.update_many({"cityId":_id},{"$unset":{"cityId":_id}} , {"multi": True})
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1100, in update_many
+    hint=hint, session=session),
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 870, in _update_retryable
+    _update, session)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 866, in _update
+    retryable_write=retryable_write)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 770, in _update
+    common.validate_boolean("upsert", upsert)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\common.py", line 163, in validate_boolean
+    raise TypeError("%s must be True or False" % (option,))
+TypeError: upsert must be True or False
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:DELETE,1156,1617369606
+ERROR:main:Exception on /city/sehir11 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 55, in cities
+    state=self.mong_obj.deleteCity(content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 62, in deleteCity
+    self.db.boroughs.update_many({"cityId":_id},{"$unset":{"cityId":_id}} , {"multi": True})
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 1100, in update_many
+    hint=hint, session=session),
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 870, in _update_retryable
+    _update, session)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 866, in _update
+    retryable_write=retryable_write)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\collection.py", line 770, in _update
+    common.validate_boolean("upsert", upsert)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\pymongo\common.py", line 163, in validate_boolean
+    raise TypeError("%s must be True or False" % (option,))
+TypeError: upsert must be True or False
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:DELETE,1387,1617369680
+ERROR:main:Exception on /city/sehir11 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\eyyup\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\routes\cities.py", line 55, in cities
+    state=self.mong_obj.deleteCity(content)
+  File "C:\Users\eyyup\Desktop\kartaca-project\rest\db_connection.py", line 60, in deleteCity
+    self.db.boroughs.update_many({"cityId":_id},{"$unset":{"cityId":_id}} , multi=True)
+TypeError: update_many() got an unexpected keyword argument 'multi'
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:DELETE,1142,1617369703
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:DELETE,1308,1617369716
+INFO:restAPI:PUT,1681,1617369771
+INFO:restAPI:PUT,1644,1617369812
+INFO:restAPI:DELETE,1294,1617369829
+INFO:restAPI:PUT,1833,1617369864
+INFO:restAPI:PUT,1899,1617369925
+INFO:restAPI:PUT,1739,1617370059
+INFO:restAPI:DELETE,1360,1617370205
+INFO:restAPI:PUT,1541,1617370237
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1433,1617370270
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1774,1617370292
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1515,1617370469
+INFO:restAPI:PUT,1466,1617370485
+INFO:restAPI:GET,2526,1617370852
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:DELETE,1197,1617371036
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:PUT,1494,1617371141
+INFO:restAPI:PUT,1792,1617371157
+INFO:restAPI:PUT,1792,1617371173
+INFO:restAPI:GET,2863,1617375085
+INFO:restAPI:GET,2632,1617375091
+INFO:restAPI:GET,2424,1617375092
+INFO:restAPI:GET,2617,1617375093
+INFO:restAPI:GET,2898,1617375093
+INFO:restAPI:GET,2915,1617375093
+INFO:restAPI:GET,2452,1617375094
+INFO:restAPI:GET,2991,1617375093
+INFO:restAPI:GET,2432,1617375094
+INFO:restAPI:GET,2843,1617375094
+WARNING:kafka.client:Unable to send to wakeup socket!

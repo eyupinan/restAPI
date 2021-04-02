@@ -17,9 +17,9 @@ docker-compose up --build
 ```
 komutu çalıştırılır. Bu komut gerekli bağlılıkların kurulumunu docker içerisine yaptıktan sonra çalışmaya 
 başlayacaktır.Uygulamanın config özellikleri .env dosyası üzerinden değiştirilebilir.
-Aşağıda gösterilen yöntemlerle 'localhost:5000' adresine request gönderilebilir.
-RestAPI için gelen requestlerin gecikme durumlarının gözlemlenebilmesi için 
-'localhost:8052' adresine gidilir. Bu adreste uygulamanın gecikme grafiği gözlemlenebilir.
+Aşağıda gösterilen yöntemlerle ```localhost:5000``` adresine request gönderilebilir.
+RestAPI için gelen requestlerin gecikme durumlarının grafiği için
+```localhost:8052``` adresine gidilir.
 
 ### GET method
 
@@ -101,6 +101,9 @@ $.ajax({
         }
 });
 ``` 
+Body bulundurmayan put metodu için geliştirilmiş update dizini standart put metodundan farklıdır.
+body ile gönderilen put metodunda url parametreleri ve query parametreleri sorgu için kullanılır.
+update dizinine gönderilen request'ler body gerektirmez ve normalden farklı olarak query parametrelerini yeni data olarak kullanır.
 
 ### DELETE method
 

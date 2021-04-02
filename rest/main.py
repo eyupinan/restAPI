@@ -72,39 +72,6 @@ def home():
     if request.method=="DELETE":
         resp=Response("delete method delay:"+str(g.delay),status=200)
     return resp
-@app.route('/city/<city_name>/update',methods=["PUT"])
-@app.route('/<city_name>/update',methods=["PUT"])
-@app.route('/city/<city_name>/update/<entity_name>/<value>',methods=["PUT"])
-@app.route('/<city_name>/update/<entity_name>/<value>',methods=["PUT"])
-def update_city(city_name,entity_name=None,value=None):
-    if bool(request.args)!=False or (entity_name!=None and value!=None):# bir update datasının sağlandığının kontrolü
-        #bu kullanımda city_name url kısmı sorgu için update sonrasında verilecek entity ismi ile verilen
-        #parametre  veya query parametreleri update edilecek data olarak kullanılır.
-        content=request.args.to_dict()
-        content=add_value(content,[entity_name],[value])
-        query={"name":city_name}
-        mong_obj.updateCity(query,content)
-        return Response("başarılı",status=200)
-    else:
-        return Response("gerekli parametreler sağlanmadı",status=400)
-@app.route('/borough/<borough_name>/update',methods=["PUT"])
-@app.route('/<city_name>/<borough_name>/update',methods=["PUT"])
-@app.route('/<city_name>/<borough_name>/update/<entity_name>/<value>',methods=["PUT"])
-@app.route('/borough/<borough_name>/update/<entity_name>/<value>',methods=["PUT"])
-def update_borough(borough_name,entity_name,value,city_name=None):
-    if bool(request.args)!=False or (entity_name!=None and value!=None):# bir update datasının sağlandığının kontrolü
-        #burada url içerisindeki ilçe ismi ve şehir ismi sorgu için , update dizini sonrasındaki url parametreleri
-        # ve query parametreleri update datası olarak kullanılmıştır
-        content=request.args.to_dict()
-        content=add_value(content,[entity_name],[value])
-        query={"name":borough_name}
-        ref={"name":city_name}
-        mong_obj.updateBorough(query,content,ref)
-        return Response("başarılı",status=200)
-    else:
-        return Response("gerekli parametreler sağlanmadı",status=400)
-
-
 if __name__ == '__main__':
     app.run(host=os.environ["REST_HOST"],port = os.environ["REST_PORT"],debug=False,threaded=True)
 

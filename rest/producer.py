@@ -4,7 +4,7 @@ import time
 import os
 from kafka import KafkaProducer
 import json
-os.environ["KAFKA_ADDRESS"]="localhost:9092"
+#os.environ["KAFKA_ADDRESS"]="localhost:9092"
 os.environ["KAFKA_TOPIC"]="restTopic"
 kafkaAdress=os.environ["KAFKA_ADDRESS"]
 class KafkaHandler(logging.Handler):
@@ -25,7 +25,6 @@ class KafkaHandler(logging.Handler):
     def emit(self, record):
         if 'kafka.' in record.name:
             return
-        #time.sleep(10)
         msg = self.format(record)
         try:
             pieces=msg.split(",")

@@ -20,7 +20,6 @@ myclient = pymongo.MongoClient("mongodb://"+os.environ["MONGO_ADDRESS"])
 mydb = myclient["mydatabase4"]
 mycol = mydb["mylogs"]
 ist=tz.gettz("Europe/Istanbul")
-
 def get_arr(mycol,method):
         now = time.time()
         query = { "method": method , "timestamp": { "$gt" : now-3600 }}
@@ -49,6 +48,8 @@ def trace_generator(mycol):
     postDF=postDF.resample(aralik).mean().fillna(method='ffill')
     putDF=putDF.resample(aralik).mean().fillna(method='ffill')
     delDF=delDF.resample(aralik).mean().fillna(method='ffill')
+    #print(getDF)
+    #print("----")
     fill_type="tozeroy"
     get_trace = plotly.graph_objs.Scatter(
         x=getDF.index,
@@ -125,7 +126,9 @@ app.layout = html.Div(children=[
 @app.callback(Output('live-graph', 'figure'),
               [Input('graph-update', 'n_intervals')])
 def update_graph_scatter(n):
+    print("geldi")
     traces=trace_generator(mycol)
+    print(traces)
     now=time.time()
     return {'data': traces,
             'layout': go.Layout(

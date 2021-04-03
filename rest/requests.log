@@ -2238,3 +2238,9 @@ INFO:restAPI:GET,2991,1617375093
 INFO:restAPI:GET,2432,1617375094
 INFO:restAPI:GET,2843,1617375094
 WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:GET,2728,1617380282
+WARNING:kafka.client:Unable to send to wakeup socket!
+INFO:restAPI:GET,2686,1617380311
+INFO:restAPI:PUT,1423,1617380339
+INFO:restAPI:GET,2476,1617380357
+WARNING:kafka.client:Unable to send to wakeup socket!

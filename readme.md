@@ -28,7 +28,7 @@ Mongodb bağlantısı mongonun expose edildiği porttan host cihazda görüntül
 ## NOT!!! 
 Bilgisayarınızda çalışmakta olan bir kafka serveri eğer docker içerisindeki kafka ile çakışacak olursa 
 ``` .env ``` dosyasından ```kafka_outside_port``` değeri değiştirilerek kafka outside servis portu değiştirilebilir.
-
+Challenge de özellikle istenmemiş olmasıdan dolayı ve kullanım kolaylığı için jwt eklenmemiştir
 ## RestAPI Ayrıntılar
 restAPI içerisinde tamamen etkisiz isteklerin gönderilebilmesi için sadece ```localhost:5000/``` adresi  kullanılır.
 Bu adreslere gönderilen get,post,put ve delete istekleri tamamen etkisizdir ve sistem tarafından cevap olarak sadece istek tipi ve 0-3 saniye arasında rastgele bir delay değeri geri gönderilir.Örnek olarak 

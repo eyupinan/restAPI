@@ -21,10 +21,25 @@ Aşağıda gösterilen yöntemlerle ```localhost:5000``` adresine request gönde
 RestAPI için gelen requestlerin gecikme durumlarının grafiği için
 ```localhost:8052``` adresine gidilir.
 
-### GET method
+## RestAPI Ayrıntılar
+restAPI içerisinde tamamen etkisiz isteklerin gönderilebilmesi için sadece ```localhost:5000/``` adresi  kullanılır.
+Bu adreslere gönderilen get,post,put ve delete istekleri tamamen etkisizdir ve sistem tarafından cevap olarak sadece istek tipi ve 0-3 saniye arasında rastgele bir delay değeri geri gönderilir.Örnek olarak 
+```javascript
+$.ajax({
+    url: 'http://localhost:5000/',
+    type: "GET",//POST,PUT veya DELETE komutlarıda kullanılabilir.
+    success: function(result) {
+        console.log(result)
+        }
+});
+```
+bu komut etkisizdir ve console ekranına ```get method <delay>``` yazar.
 
-Get metodu için url parametreleri ve query parametreleri sorgu işlemi için kullanılabilir.
-Örnek jquery get method kullanımları:
+Rest api içerisinde şehir ve ilçeler için basit bir sistem geliştirilmiştir.Şehir görüntüleme,ekleme,güncelleme veya silme işlemleri için  ```/city/<şehir_ismi>``` adresine istek gönderilebilir. Aynı işlemler ilçeler için ```/borough/<ilçe_ismi>``` veya ```/city/<şehir_ismi>/borough/<ilçe_ismi>``` adresine istek gönderilerek gerçekleştirilebilir.
+Aşağıda bu adreslerin kullanım örnekleri verilmiştir.
+
+### GET method
+Get metodunda url ve query parametreleri sorgu için kullanılmıştır.
 ```javascript
 //bütün şehirlerin bilgilerini sorgular
 $.get("http://localhost:5000/city",(data,status)=>{
@@ -34,34 +49,20 @@ $.get("http://localhost:5000/city",(data,status)=>{
 $.get("http://localhost:5000/city/istanbul",(data,status)=>{
     console.log(data)
     })
-//query parametresi olarak verilen şehrin bilgilerini sorgular
-$.get("http://localhost:5000/city?name=istanbul",(data,status)=>{
-    console.log(data)
-    })
-//istanbul şehrinde fatih ilçesinin bilgilerini sorgular
-$.get("http://localhost:5000/istanbul/borough?name=fatih",(data,status)=>{
-    console.log(data)
-    })
-//herhangi bir şehirdeki fatih ilçesini sorgular
-$.get("http://localhost:5000/borough/fatih",(data,status)=>{
+//url parametresi olan istanbul şehrinde query parametresi olan fatih ismine sahip ilçeyi sorgular
+$.get("http://localhost:5000/city/istanbul/borough",{"name":"fatih"},(data,status)=>{
     console.log(data)
     })
 ```
 ### POST method
- POST metodu için url parametreleri,sorgu parametreleri ve request body'si yeni bir veri oluşturmak için kullanılır.
-Örnek jquery POST kullanımları:
+POST metodunda url parametreleri ve request body'si eklenecek data olarak kullanılır.
 ``` javascript
-//bu request şehir oluşturur. body içerisinde verilen veriler şehir için özellik olarak kaydedilir.
-$.post("http://localhost:5000/istanbul",json.stringify({"plaka":"34"}),(data,status)=>{
+//bu request sadece istanbul adına sahip olan bir şehir oluşturur
+$.post("http://localhost:5000/city/istanbul",(data,status)=>{
     console.log(data)
 })
-//bu requst istanbul şehri referans alınarak fatih ilçesi oluşturur. query parametresi olarak verilen veriler
-//ilçe bilgileri olarak kaydedilir.
-$.post("http://localhost:5000/istanbul/fatih?"+$.param({"population":"1234"}),(data,status)=>{
-    console.log(data)
-})
-// borough dizini üzerine oluşturulan ilçeler şehir referans olarak göstermeyebilir.
-$.post("http://localhost:5000/borough/fatih?"+$.param({"population":"1234"}),(data,status)=>{
+//bu request istanbul şehri referansına sahip fatih adında içe oluşturur ve nüfus özelliği body içerisindeki değer olarak atanır
+$.post("http://localhost:5000/city/istanbul/borough/fatih",JSON.stringify({"population":1234}),(data,status)=>{
     console.log(data)
 })
 ```
@@ -70,40 +71,35 @@ $.post("http://localhost:5000/borough/fatih?"+$.param({"population":"1234"}),(da
 PUT metodu için url parameteleri sorgu için query parametreleri ve body güncellenecek bilgiler için kullanılır.
 Örnek jquery PUT kullanımları:
 ``` javascript
-//istanbul şehrinin nüfusu özelliğini güncellemek için request body kullanılabilir
-//aynı şekilde /istanbul/fatih veya /borough/fatih url yolları ile fatih ilçesi bilgileri güncellenebilir.
+//bu request eğer istanbul adında bir şehir yok ise oluşturur ve nüfus değerini değiştirir.
+//eğer istanbul adında bir şehir var ise bu şehirin nüfus değerini değiştirir.
 $.ajax({
-    url: 'http://localhost:5000/istanbul',
+    url: 'http://localhost:5000/city/istanbul',
     type: 'PUT',
 	data:JSON.stringify({"population":15000000}),
     success: function(result) {
         console.log(result)
         }
 });
-// şehir veya ilçe için /update/<entity_name>/<value> şeklinde verilecek parametreler şehir için <entity_name>
-//özelliğini <value> olarak verilen değer ile günceller.burada şehir veya ilçe ismi sorgu için 
-// update dizini sonrası url parametreleri veya query parametreleri update datası olarak kullanılır
-
-//bu request istanbul şehrinin nüfusunu günceller
+//query parametreleri de sorgu amacı ile kullanılabilir.
 $.ajax({
-    url: 'http://localhost:5000/istanbul/update/population/15000000',
+    url: 'http://localhost:5000/city?'+$.param({"name":"istanbul"}),
     type: 'PUT',
     success: function(result) {
         console.log(result)
         }
 });
-//bu request'de  yukarıdaki request ile aynı işi yapar ancak parametre olarak query parametreleri kullanılır
+//bu request de eğer bulunmuyor ise istanbul şehri ve fatih ilçesi oluştururlur. Fatih ilçesi zaten bulunuyor ise 
+//ilçenin şehir referansı istanbul olarak atanır.
 $.ajax({
-    url: 'http://localhost:5000/istanbul/update?'+$.param({"population":15000000}),
+    url: 'http://localhost:5000/city/istanbul/borough/fatih'
     type: 'PUT',
     success: function(result) {
         console.log(result)
         }
 });
 ``` 
-Body bulundurmayan put metodu için geliştirilmiş update dizini standart put metodundan farklıdır.
-body ile gönderilen put metodunda url parametreleri ve query parametreleri sorgu için kullanılır.
-update dizinine gönderilen request'ler body gerektirmez ve normalden farklı olarak query parametrelerini yeni data olarak kullanır.
+
 
 ### DELETE method
 
@@ -121,10 +117,12 @@ $.ajax({
 });
 //istanbul şehrinin fatih ilçesini siler
 $.ajax({
-    url: 'http://localhost:5000/istanbul/fatih',
+    url: 'http://localhost:5000/city/istanbul/borough/fatih',
     type: 'DELETE',
     success: function(result) {
         console.log(result)
     }
 });
 ```
+
+Anahtar kod : ``` gAAAAABgUI2G_hG13_Ix3R2OGUA8k4Njj3LOOy7-MPMt71MziNfr_aDCvnuqvxPpOYZYzlpHL_SGGtbut5W7ibF3129gkKeCOU9RodUbSW3NxvvRE0qI095R_LURsbwqBO7ngzJdSzl_XFhtA8lW6MdADW1CMa6y5_-DpVutUjm8agE8Os_CmTwVUlR3OCCanwTdIz4ZSGhhABEILPo6HV3faEGxk9wKPQ== ```

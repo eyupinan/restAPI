@@ -33,6 +33,7 @@ app.config["MONGO_URI"] = "mongodb://"+os.environ["MONGO_ADDRESS"]+"/locations"
 mongo = PyMongo(app)
 mong_obj=mong(mongo)
 CORS(app)
+
 #routes klasörü içerisindeki dosyalar tarafından tanımlanan blueprint'ler flask server'a ekleniyor
 cities_print=cities_blueprint(mong_obj).create_blueprint()
 boroughs_print=boroughs_blueprint(mong_obj).create_blueprint()
@@ -44,7 +45,6 @@ def middle():
     if request.method in ["GET","POST","PUT","DELETE"]:
         print("request received",request.url,request.method)
         g.delay=middleware.delay(request,executor)
-        print(g.delay)
 
 #tamamen etkisiz requestlerin atılabilmesi için  kullanılmıştır
 @app.route('/',methods=["POST","GET","PUT","DELETE"])

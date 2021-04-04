@@ -14,7 +14,7 @@ class listener:
                 self.consumer = KafkaConsumer(kafka_topic,bootstrap_servers=kafka_adress,
                                             value_deserializer=lambda m: json.loads(m.decode('utf-8')))
                 self.myclient = pymongo.MongoClient("mongodb://"+mongo_address)
-                self.mydb = self.myclient["mydatabase4"]
+                self.mydb = self.myclient["kafkaLogs"]
                 self.mycol = self.mydb["mylogs"]
                 break
             except Exception as e:

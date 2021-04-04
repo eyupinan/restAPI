@@ -5,8 +5,9 @@ import os
 from kafka import KafkaProducer
 import json
 #os.environ["KAFKA_ADDRESS"]="localhost:9092"
-os.environ["KAFKA_TOPIC"]="restTopic"
+#os.environ["KAFKA_TOPIC"]="restTopic"
 kafkaAdress=os.environ["KAFKA_ADDRESS"]
+kafkaTopic=os.environ["KAFKA_TOPIC"]
 class KafkaHandler(logging.Handler):
 
     def __init__(self):
@@ -20,7 +21,7 @@ class KafkaHandler(logging.Handler):
                 print("1 saniye sonra yeniden denenecek")
             time.sleep(1)
         
-        self.topic = os.environ["KAFKA_TOPIC"]
+        self.topic = kafkaTopic
 
     def emit(self, record):
         if 'kafka.' in record.name:

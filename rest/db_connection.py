@@ -8,6 +8,7 @@ def merge_dict(dict1,dict2):
         merged_dict.update(dict2)
     return merged_dict  
 def add_ref(collection,content,ref,ref_name,content_ref_name):
+    # bu fonksiyon referans objesi içerisindeki şehir ismine göre şehrin _id değerini content içerisine ekliyor
     new_content=content.copy()
     if ref_name in ref:
         if ref[ref_name]!=None:
@@ -77,7 +78,7 @@ class mong:
                 #şehrin id'si ilçeye referans olarak atanıyor
                 content=add_ref(self.db.cities,content,ref,"name","cityId")
 
-        #eğer aynı isim ve referansa sahip ilçe varsa anlaşmazlık cevabı döndürülüyor
+        #eğer aynı isime sahip ilçe varsa anlaşmazlık cevabı döndürülüyor
         if "name" in content:
             check={"name":content["name"]}
             found=list(self.db.boroughs.find(check))
@@ -114,6 +115,7 @@ class mong:
             state=self.setBorough(new_content,ref)
             return state
     def deleteBorough(self,content,ref):
+        #ilçe siliniyor eğer ilçe için bir referans şehir atanmışsa bu referansa göre arama yapılıyor
         content=add_ref(self.db.cities,content,ref,"name","cityId")
         delete_result=self.db.boroughs.delete_many(content)
         if delete_result.deleted_count>0:

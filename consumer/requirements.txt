@@ -1,5 +1,2 @@
 kafka-python==2.0.2
-matplotlib==3.3.4
-mpld3==0.5.2
-tornado==6.1
 pymongo==3.11.3

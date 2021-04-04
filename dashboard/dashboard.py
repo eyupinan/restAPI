@@ -7,38 +7,44 @@ import plotly.graph_objs as go
 import pymongo
 import time
 import pandas as pd
-import numpy as np
 from datetime import datetime
 import os 
 import logging
 from dateutil import tz
-
+ist=tz.gettz("Europe/Istanbul")
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
-myclient = pymongo.MongoClient("mongodb://"+os.environ["MONGO_ADDRESS"])
-#myclient = pymongo.MongoClient("mongodb://localhost:27017")
-mydb = myclient["mydatabase4"]
-mycol = mydb["mylogs"]
-ist=tz.gettz("Europe/Istanbul")
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+while True:
+    try:
+        myclient = pymongo.MongoClient("mongodb://"+os.environ["MONGO_ADDRESS"])
+        mydb = myclient["kafkaLogs"]
+        mycol = mydb["mylogs"]
+        break
+    except:
+        logging.info("database bağlantısı kurulamadı 1 saniye sonra tekrar denenecek")
+        time.sleep(1)
+
+
+
 def get_arr(mycol,method):
+        #database üzerine sorgu yapılıyor ve elde edilen veriler bir pandas dataFrame i içerisine yerleştiriliyor
         now = time.time()
         query = { "method": method , "timestamp": { "$gt" : now-3600 }}
         logs = mycol.find(query)
-        arr1=[]
-        arr2=[]
+        
+        delay_arr=[]
         date_time=[]
         for i in logs:
-            tmstp=int(i["timestamp"])-(now-3600)
-            date_time.append(pd.to_datetime(datetime.fromtimestamp(i["timestamp"],tz=ist).strftime('%H:%M:%S')))
-            arr1.append(tmstp)
-            arr2.append(float(i["delay"]))
+            date_time.append(pd.to_datetime(datetime.fromtimestamp(i["timestamp"],tz=ist)))
+            delay_arr.append(float(i["delay"]))
         date_time = pd.to_datetime(date_time)
         DF = pd.DataFrame()
-        DF['delay'] = arr2
+        DF['delay'] = delay_arr
         DF = DF.set_index(date_time)
         return DF
 def trace_generator(mycol):
-    pd.set_option("display.max_rows", None, "display.max_columns", None)
+    #plotly için dataFrameleri oluşturuluyor ve bu frame'lerden her bir method için trace oluşturuluyor.    
     getDF=get_arr(mycol,"GET")
     postDF=get_arr(mycol,"POST")
     putDF=get_arr(mycol,"PUT")
@@ -48,8 +54,6 @@ def trace_generator(mycol):
     postDF=postDF.resample(aralik).mean().fillna(method='ffill')
     putDF=putDF.resample(aralik).mean().fillna(method='ffill')
     delDF=delDF.resample(aralik).mean().fillna(method='ffill')
-    #print(getDF)
-    #print("----")
     fill_type="tozeroy"
     get_trace = plotly.graph_objs.Scatter(
         x=getDF.index,
@@ -105,8 +109,7 @@ def trace_generator(mycol):
         )
     )
     return [get_trace,post_trace,put_trace,del_trace]
-traces=trace_generator(mycol)
-now=time.time()
+
 external_stylesheets = [
     'https://codepen.io/chriddyp/pen/bWLwgP.css',
     '/assets/dashboard.css'
@@ -126,9 +129,8 @@ app.layout = html.Div(children=[
 @app.callback(Output('live-graph', 'figure'),
               [Input('graph-update', 'n_intervals')])
 def update_graph_scatter(n):
-    print("geldi")
+    #belirli bir zaman aralığı ile dashboard'ın güncelleme işlemi gerçekleştiriliyor.
     traces=trace_generator(mycol)
-    print(traces)
     now=time.time()
     return {'data': traces,
             'layout': go.Layout(

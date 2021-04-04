@@ -50,5 +50,7 @@ class Middleware:
             "timestamp":timestamp
             }
             formatted=FORMAT % format_map
+            # logging komutu gerçeklendiği esnada KafkaHandler sınıfında tanımlanmış olan emit fonksiyonu
+            # çağırılır. Bu fonksiyon log dosyasına yazmadan önce kafkaya mesaj gönderir
             executor.submit(self.logKafka.info,formatted)
         return dl

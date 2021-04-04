@@ -4,38 +4,71 @@
     </head>
     <script>
         $(document).ready(()=>{
-
-        
-        $("#get").click(()=>{
+        element=document.getElementById("received")
+        function received_message(msg){
+            console.log(msg)
+            element.innerHTML=msg
+        }
+        function get(){
             $.get("http://localhost:5000/",(data,status)=>{
-            console.log("received data:",data)
+            received_message(data)
         })
-        })
-        $("#post").click(()=>{
+        }
+            
+        function post(){
             $.post("http://localhost:5000/",(data,status)=>{
-            console.log("received data:",data)
+                received_message(data)
         })
-
-        })
-        $("#put").click(()=>{
+        }
+        function put(){
             $.ajax({
                 url: 'http://localhost:5000/',
                 type: 'PUT',
                 success: function(data) {
-                    console.log("received data:",data)
+                    received_message(data)
                 }
             });
-        
-        })
-        $("#delete").click(()=>{
+        }
+        function del(){
             $.ajax({
                 url: 'http://localhost:5000/',
                 type: 'DELETE',
                 success: function(data) {
-                    console.log("received data:",data)
+                    received_message(data)
                 }
             });
+        }
         
+        $("#get").click(()=>{
+            get();
+        })
+        $("#post").click(()=>{
+            post()
+
+        })
+        $("#put").click(()=>{
+            put()
+        })
+        $("#delete").click(()=>{
+            del()        
+        })
+        $("#rand").click(()=>{
+            sayac=0
+            metod_liste=["GET","POST","PUT","DELETE"]
+            liste={"GET":get,"POST":post,"PUT":put,"DELETE":del}
+            interval=setInterval(() => {
+                if (sayac<20){
+                    rand = Math.floor(Math.random() * 4); 
+                
+                    liste[metod_liste[rand]]()
+                    sayac++
+                }
+                else{
+                    clearInterval(interval);
+                }
+                
+            
+            }, 1000);
         })
     })
         </script>
@@ -43,4 +76,7 @@
         <button id="post">post</button>
         <button id="put">put</button>
         <button id="delete">delete</button>
+        <br><br>
+        <button id="rand">1 er saniye ara ile 20 random request gönder</button>
+        <p id="received"></p>
 </html>

@@ -20,6 +20,7 @@ başlayacaktır.Uygulamanın config özellikleri .env dosyası üzerinden deği�
 Aşağıda gösterilen yöntemlerle ```localhost:5000``` adresine request gönderilebilir.
 RestAPI için gelen requestlerin gecikme durumlarının grafiği için
 ```localhost:8052``` adresine gidilir.
+Uygulamaya tamamen etkisiz rastgele request'ler gönderen bir ```client.html``` dosyası eklenmiştir. Bu uygulama basılan butonlara göre istek gönderir.
 
 Log dosyasının görüntülenmesi için 
 ```docker cp restAPI_inan:/usr/src/app/rest /<kopyalanmak istenen adres>```

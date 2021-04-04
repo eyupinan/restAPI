@@ -3,28 +3,16 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <script>
-        //$.get("http://localhost:8080/hello",(data,status)=>{
-        //    console.log(data)
-        //})
-        
-        user={
-            "name":"ibrahim eyyup",
-            "surname":"inan"
-        }
-        str="ibrahima yattara"
         $(document).ready(()=>{
 
         
         $("#get").click(()=>{
             $.get("http://localhost:5000/",(data,status)=>{
-            console.log("get:")
-            console.log("status:",status)
             console.log("received data:",data)
         })
         })
         $("#post").click(()=>{
             $.post("http://localhost:5000/",JSON.stringify(user),(data,status)=>{
-            console.log("status:",status)
             console.log("received data:",data)
         })
 
@@ -33,8 +21,8 @@
             $.ajax({
                 url: 'http://localhost:5000/',
                 type: 'PUT',
-                success: function(result) {
-                    console.log(result)
+                success: function(data) {
+                    console.log("received data:",data)
                 }
             });
         
@@ -43,8 +31,8 @@
             $.ajax({
                 url: 'http://localhost:5000/',
                 type: 'DELETE',
-                success: function(result) {
-                    console.log(result)
+                success: function(data) {
+                    console.log("received data:",data)
                 }
             });
         

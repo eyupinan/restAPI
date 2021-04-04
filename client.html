@@ -12,7 +12,7 @@
         })
         })
         $("#post").click(()=>{
-            $.post("http://localhost:5000/",JSON.stringify(user),(data,status)=>{
+            $.post("http://localhost:5000/",(data,status)=>{
             console.log("received data:",data)
         })
 

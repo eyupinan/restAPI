@@ -20,6 +20,9 @@ başlayacaktır.Uygulamanın config özellikleri .env dosyası üzerinden deği�
 Aşağıda gösterilen yöntemlerle ```localhost:5000``` adresine request gönderilebilir.
 RestAPI için gelen requestlerin gecikme durumlarının grafiği için
 ```localhost:8052``` adresine gidilir.
+## NOT!!! 
+Bilgisayarınızda çalışmakta olan bir kafka serveri eğer docker içerisindeki kafka ile çakışacak olursa 
+``` .env ``` dosyasından ```kafka_outside_port``` değeri değiştirilerek kafka outside servis portu değiştirilebilir.
 
 ## RestAPI Ayrıntılar
 restAPI içerisinde tamamen etkisiz isteklerin gönderilebilmesi için sadece ```localhost:5000/``` adresi  kullanılır.

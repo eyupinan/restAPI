@@ -43,7 +43,7 @@ services:
       KAFKA_LOG4J_LOGGERS: "kafka.controller=WARN,kafka.producer.async.DefaultEventHandler=WARN,state.change.logger=WARN,kafka=WARN"
   web:
     build: ./rest
-    container_name: restAPI
+    container_name: restAPI_inan
     ports: 
       - ${rest_port}:${rest_port}
     restart: always
